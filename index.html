@@ -1,8 +1,8 @@
-<!DOCTYPE html><html lang="es"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>HOMBRE = DIOS</title><style>:root{--bg:#f4f7fc;--surface:#fff;--text:#212529;--text-secondary:#6c757d;--border-light:#dee2e6;--nodo-bg:white;--nodo-hover-bg:#f8faff;--nodo-shadow:rgba(0,0,0,0.04);--level-0-bg:#fef5e7;--level-0-border:#e67e22;--level-1-border:#3498db;--level-2-border:#2ecc71;--level-3-border:#9b59b6;--level-4-border:#e74c3c;}body.dark-theme{--bg:#1e1e2e;--surface:#2a2a3c;--text:#e0e0e0;--text-secondary:#a0a0b0;--border-light:#3a3a4c;--nodo-bg:#2a2a3c;--nodo-hover-bg:#35355a;--level-0-bg:#3d2e1c;--level-0-border:#f0a04b;}body{font-family:"Segoe UI",Roboto,sans-serif;padding:20px;background:var(--bg);color:var(--text);}.logo{max-height:60px;margin-bottom:10px;}.search-box{display:flex;align-items:center;background:var(--surface);border-radius:20px;padding:4px 8px;border:1px solid var(--border-light);margin-bottom:8px;}.search-box input{border:none;background:transparent;outline:none;width:100%;color:var(--text);}.search-box button{background:transparent;border:none;cursor:pointer;color:var(--text-secondary);}.card-nodo{border-left:5px solid;padding:10px 16px;margin-bottom:10px;cursor:pointer;background:var(--nodo-bg);border-radius:12px;box-shadow:0 1px 4px var(--nodo-shadow);transition:transform 0.15s;}.card-nodo:hover{transform:translateX(4px);background:var(--nodo-hover-bg);}.level-0{border-left-color:var(--level-0-border);background:var(--level-0-bg);}.level-1{border-left-color:var(--level-1-border);}.level-2{border-left-color:var(--level-2-border);}.level-3{border-left-color:var(--level-3-border);}.level-4{border-left-color:var(--level-4-border);}.nodo-titulo{font-weight:600;display:flex;justify-content:space-between;align-items:center;}.nodo-hijos{margin-left:28px;padding-left:16px;border-left:2px dashed var(--border-light);margin-top:8px;}.collapsed{display:none;}.icono-toggle{font-size:0.9rem;opacity:0.6;margin-left:12px;}.reader-panel{background:var(--surface);border-radius:12px;padding:8px 12px;margin-bottom:8px;display:flex;align-items:center;gap:8px;position:sticky;top:0;}select.form-select{background:var(--surface);color:var(--text);border:1px solid var(--border-light);border-radius:20px;padding:4px 8px;}.toolbar-export{display:flex;gap:6px;margin-bottom:12px;flex-wrap:wrap;}.btn-export{background:#f8f9fa;color:#212529;border:1px solid #ccc;border-radius:20px;padding:4px 12px;cursor:pointer;font-family:inherit;font-size:0.85rem;}.btn-dark-export{background:#212529;color:white;border:none;border-radius:20px;padding:4px 12px;cursor:pointer;font-family:inherit;font-size:0.85rem;}body.dark-theme .btn-export{background:#333;color:#fff;border-color:#555;}body.dark-theme .btn-dark-export{background:#f8f9fa;color:#212529;}</style></head><body><h2>HOMBRE = DIOS</h2><div class="toolbar-export"><button id="btnExpandirAll" class="btn-export">Expandir Todo</button><button id="btnColapsarAll" class="btn-export">Colapsar Todo</button><button id="btnThemeExport" class="btn-dark-export">🌙 Modo Oscuro</button></div><div class="reader-panel"><button id="btnPlayPause">▶</button><button id="btnStop">⏹</button><button id="btnLoop">🔁</button><select id="voiceSelect" class="form-select" style="width:auto;"></select><span id="currentReading" style="font-size:0.8rem;color:var(--text-secondary);">Listo</span></div><div class="search-box"><input type="text" id="searchInput" placeholder="Buscar en mapa..."><button id="clearSearch">✕</button></div><div id="mapa"></div><script type="text/plain" id="content"># HOMBRE = DIOS
+<!DOCTYPE html><html lang="es-ES"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0"><title>HOMBRE = DIOS</title><style>*{box-sizing:border-box}body{font-family:"Segoe UI",sans-serif;background:#f4f7fc;color:#333;padding:20px;margin:0}.container{max-width:900px;margin:auto}.header{background:linear-gradient(135deg,#1a2a4a,#2c3e6b);color:white;padding:15px;border-radius:12px;margin-bottom:20px}.header h1{margin:0;font-size:1.5rem}.toolbar{display:flex;gap:8px;margin-bottom:12px;flex-wrap:wrap;align-items:center}.toolbar button{border:none;border-radius:8px;padding:8px 14px;cursor:pointer;font-size:14px;font-weight:bold}.btn-play{background:#2ecc71;color:white}.btn-play:hover{background:#27ae60}.btn-pause{background:#f39c12;color:white}.btn-pause:hover{background:#e67e22}.btn-stop{background:#e74c3c;color:white}.btn-stop:hover{background:#c0392b}.btn-loop{background:#9b59b6;color:white}.btn-loop:hover{background:#8e44ad}.btn-loop.active{background:#8e44ad;box-shadow:inset 0 0 0 3px #fff}.btn-clear{background:#95a5a6;color:white;font-size:12px;padding:6px 10px}.btn-clear:hover{background:#7f8c8d}.btn-karaoke{background:#3498db;color:white}.btn-karaoke:hover{background:#2980b9}.btn-karaoke.active{background:#2980b9;box-shadow:inset 0 0 0 3px #fff}.btn-rec{background:#e74c3c;color:white}.btn-rec:hover{background:#c0392b}.btn-rec.recording{background:#c0392b;animation:pulse 1s infinite}@keyframes pulse{0%,100%{box-shadow:0 0 0 0 rgba(231,76,60,0.7)}50%{box-shadow:0 0 0 8px rgba(231,76,60,0)}}.btn-light{background:#f8f9fa;color:#333;border:1px solid #ccc}.btn-light:hover{background:#e9ecef}.timer-display{font-family:"Consolas",monospace;font-weight:bold;font-size:16px;color:#2c3e6b;background:white;padding:6px 12px;border-radius:8px;border:1px solid #e0e6ed;min-width:70px;text-align:center}.timer-estimado{font-size:11px;color:#888}.status{font-size:12px;color:#666;margin-left:auto}.selection-info{font-size:11px;color:#3498db;font-weight:bold}select{padding:6px 10px;border-radius:8px;border:1px solid #ccc;font-size:13px;background:white}.node{border-left:5px solid #3498db;padding:10px 14px;margin-bottom:6px;cursor:pointer;background:white;border-radius:6px;font-size:14px;box-shadow:0 1px 3px rgba(0,0,0,0.05);display:flex;align-items:center;gap:8px}.node .node-text{flex:1}.node input[type=checkbox]{margin:0;transform:scale(1.2);cursor:pointer;accent-color:#3498db}.node:hover{background:#f0f5fa}.node.level-0{border-left-color:#e67e22;background:#fef5e7}.node.level-1{border-left-color:#3498db}.node.level-2{border-left-color:#2ecc71}.node.level-3{border-left-color:#9b59b6}.node.level-4{border-left-color:#e74c3c}.children{margin-left:20px;border-left:2px dashed #ddd;padding-left:12px;margin-top:6px}.collapsed{display:none}.icon{font-size:0.8rem;opacity:0.6;margin-left:8px}.search-box{display:flex;align-items:center;background:white;border-radius:20px;padding:4px 12px;border:1px solid #ddd;margin-bottom:10px}.search-box input{border:none;outline:none;flex:1;padding:6px;font-size:14px;background:transparent}.search-box button{border:none;background:transparent;cursor:pointer;font-size:16px;color:#888}#karaokeModal{display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:white;z-index:5000;flex-direction:column}#karaokeModal.show{display:flex}#karaokeHeader{background:linear-gradient(135deg,#1a2a4a,#2c3e6b);color:white;padding:12px 20px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px}#karaokeHeader h3{margin:0;font-size:1.2rem}#karaokeBody{flex:1;overflow-y:auto;padding:40px 60px;font-size:1.8rem;line-height:2.2;color:#212529;background:#fafbfc}#karaokeBody .karaoke-word{padding:2px 4px;border-radius:4px;transition:background-color 0.15s,color 0.15s}#karaokeBody .karaoke-word.highlight-word{background:#ffeb3b;color:#000;font-weight:bold;box-shadow:0 0 8px rgba(255,235,59,0.7)}#karaokeBody .karaoke-node-title{font-size:1.2rem;color:#3498db;font-weight:600;margin-bottom:15px;padding-bottom:8px;border-bottom:2px solid #e0e6ed}body.dark{background:#1e1e2e;color:#e0e0e0}body.dark .header{background:linear-gradient(135deg,#0d1b2a,#1b263b)}body.dark .node{background:#2a2a3c;color:#e0e0e0}body.dark .node:hover{background:#35355a}body.dark .node.level-0{background:#3d2e1c}body.dark .timer-display{background:#333;color:#fff;border-color:#555}body.dark .search-box{background:#2a2a3c;border-color:#3a3a4c}body.dark .search-box input{color:#e0e0e0}body.dark select{background:#333;color:#fff;border-color:#555}body.dark .status{color:#aaa}body.dark .timer-estimado{color:#aaa}body.dark .children{border-left-color:#3a3a4c}body.dark .btn-light{background:#333;color:#fff;border-color:#555}body.dark .selection-info{color:#6ab0ff}body.dark #karaokeBody{background:#1e1e2e;color:#e0e0e0}body.dark #karaokeBody .karaoke-node-title{color:#6ab0ff;border-bottom-color:#3a3a4c}body.dark #karaokeBody .karaoke-word.highlight-word{background:#b8860b;color:#fff;box-shadow:0 0 8px rgba(184,134,11,0.7)}</style></head><body><div class="container"><div class="header"><h1>HOMBRE = DIOS</h1></div><div class="toolbar"><button class="btn-play" id="btnPlay">▶</button><button class="btn-pause" id="btnPause" style="display:none">⏸</button><button class="btn-stop" id="btnStop">⏹</button><button class="btn-loop" id="btnLoop">🔂</button><button class="btn-karaoke" id="btnKaraoke">📖</button><button class="btn-rec" id="btnRec">⏺</button><button class="btn-clear" id="btnClear">✕ Limpiar</button><select id="voiceSelect"></select><span class="timer-display" id="timerDisplay">00:00</span><span class="timer-estimado" id="timerEstimado"></span><span class="selection-info" id="selectionInfo"></span><span class="status" id="status">Listo</span></div><div class="toolbar"><button class="btn-light" id="btnExpandir">Expandir Todo</button><button class="btn-light" id="btnColapsar">Colapsar Todo</button><button class="btn-light" id="btnTheme">🌙 Modo Oscuro</button></div><div class="search-box"><input type="text" id="searchInput" placeholder="Buscar..."><button id="clearSearch">✕</button></div><div id="mapa"></div></div><div id="karaokeModal"><div id="karaokeHeader"><h3 id="karaokeTitle">📖 Lectura Asistida</h3><div><button class="btn-play" id="kPlay">▶</button><button class="btn-pause" id="kPause" style="display:none">⏸</button><button class="btn-stop" id="kStop">⏹</button><button id="kClose" style="background:#e74c3c;color:white">✕ Cerrar</button></div></div><div id="karaokeBody"></div></div><script type="text/plain" id="raw-content"># HOMBRE = DIOS
 
 ## Presentación
 
-Este libro, *Hombre = Dios*, reúne las enseñanzas de Kirpal Singh. Habla de la naturaleza del Maestro perfecto. Del Hombre-Dios. Del *Sant Satguru*.
+Este libro, *Hombre = Dios*, reúne las enseñanzas de Kirpal Singh. Habla de la naturaleza del Maestro perfecto. Del Hombre-Dios. Del *Sant Satgurú *.
 
 A lo largo de sus páginas se explica quién es el Maestro. Por qué es imprescindible en el camino espiritual. Y cómo su manifestación... es el Verbo hecho carne.
 
@@ -30,11 +30,11 @@ El autor relata su vivencia de veinticuatro años... junto a su Maestro. Hazur B
 
 Presenta al Hombre-Dios como un Comisionado de lo alto. Un Comisionado que otorga el regalo del Verbo. *Naam*. La melodía refulgente... que conduce al alma al Hogar del Padre.
 
-Sin el toque vivificante del *Satguru*... el alma no puede despertar. No puede sintonizarse con el Verbo.
+Sin el toque vivificante del *Satgurú *... el alma no puede despertar. No puede sintonizarse con el Verbo.
 
 El Maestro... es el Verbo personificado. El Verbo... que habita entre nosotros.
 
-### El Maestro (Guru): Lo que es
+### El Maestro (Gurú ): Lo que es
 
 Es mucho... que el hombre fue hecho a semejanza de Dios. Pero, que Dios fuese hecho semejante al hombre... es aún más.
 
@@ -174,7 +174,7 @@ Lo que decimos de Él... lo hacemos a un nivel intelectual. Y ese nivel... tiene
 
 Todos nuestros esfuerzos en esta dirección... tienden a desacreditarlo. En vez de darle algún crédito.
 
-Por eso, Guru Arjan dice:
+Por eso, Gurú  Arjan dice:
 
 *Tú eres un Rey... y yo me dirijo a Ti como a un anciano.*
 *Lejos de hacerte un honor... Te traigo descredito.*
@@ -218,7 +218,7 @@ Sería recomendable... que fuésemos ante Ellos... y escucháramos... lo que tie
 - *Todas las glorias que pudieran cantarse sobre Él... durante toda la vida... no le harían justicia alguna.*
 
 
-### El Maestro es el Verbo (Guru es Shabd)
+### El Maestro es el Verbo (Gurú  es Shabd)
 
 El Evangelio de San Juan comienza con las memorables palabras:
 
@@ -316,9 +316,9 @@ Se dice:
 
 A quien es un hacedor del Verbo... se le llama Santo... o Alma Maestra.
 
-Esta Verdad solo alborea... cuando se estudia el significado de la palabra *Guru*. Deriva de la raíz sánscrita *giri*... que significa: El que llama.
+Esta Verdad solo alborea... cuando se estudia el significado de la palabra *Gurú *. Deriva de la raíz sánscrita *giri*... que significa: El que llama.
 
-Por eso... a quien oye siempre ese llamado... y puede hacerlo manifiesto en otros... se le describe como *Guru* en el Gurbani.
+Por eso... a quien oye siempre ese llamado... y puede hacerlo manifiesto en otros... se le describe como *Gurú * en el Gurbani.
 
 
 
@@ -390,19 +390,19 @@ Vive la vida imperecedera. Y está capacitado para transmitírsela a otros... qu
 
 ### Grados de Maestría
 
-Los Maestros son de cuatro tipos diferentes. El padre. La madre. El preceptor o instructor. Y finalmente... el *Satguru*. El Guía Espiritual... o *Murshid-i-Kamil*.
+Los Maestros son de cuatro tipos diferentes. El padre. La madre. El preceptor o instructor. Y finalmente... el *Satgurú *. El Guía Espiritual... o *Murshid-i-Kamil*.
 
-De todos éstos... el *Satguru* es el instructor más grande... pues él imparte únicamente instrucciones espirituales.
+De todos éstos... el *Satgurú * es el instructor más grande... pues él imparte únicamente instrucciones espirituales.
 
 A quien está versado en sabiduría mundana... se le llama preceptor... o *acharya*. Pues él nos da reglas de conducta social... y de vida ética.
 
 
 
-Al *Satguru*... o Maestro de la Verdad... también se le conoce como *Sant Satguru*. Su relación con Sus discípulos es puramente espiritual. Ya que solo le concierne el avance del espíritu. Y no tiene nada que ver con los asuntos mundanos.
+Al *Satgurú *... o Maestro de la Verdad... también se le conoce como *Sant Satgurú *. Su relación con Sus discípulos es puramente espiritual. Ya que solo le concierne el avance del espíritu. Y no tiene nada que ver con los asuntos mundanos.
 
 
 
-Desde el punto de vista de los logros espirituales... a los Gurus se les puede clasificar como: *Sadh*. *Guru*. *Sant Satguru*. Y *Param Sant Satguru*.
+Desde el punto de vista de los logros espirituales... a los Gurú s se les puede clasificar como: *Sadh*. *Gurú *. *Sant Satgurú *. Y *Param Sant Satgurú *.
 
 
 
@@ -418,7 +418,7 @@ Tales Almas Maestras aparecen de tiempo en tiempo... en diferentes países... y 
 
 
 
-Además de los *Swateh Sants*... hay *Sants* que... mediante prácticas devocionales y disciplina espiritual... bajo la guía de algún Alma Maestra... adquieren mérito espiritual aquí... y se les otorga la comisión de trabajar como Guru.
+Además de los *Swateh Sants*... hay *Sants* que... mediante prácticas devocionales y disciplina espiritual... bajo la guía de algún Alma Maestra... adquieren mérito espiritual aquí... y se les otorga la comisión de trabajar como Gurú .
 
 Ya tienen abundantes antecedentes espirituales maduros para fructificar. Y en el presente lapso de vida... sencillamente parecen completar el proceso.
 
@@ -428,7 +428,7 @@ Los *Gurmukhs* están siempre formándose. Vida tras vida. Y adquieren la perfec
 
 Kabir dijo que venía directamente del Reino de Dios... y que tenía un instrumento de instrucciones Suyas.
 
-Bhai Gurdas, al hablar de Guru Nanak, nos dice:
+Bhai Gurdas, al hablar de Gurú  Nanak, nos dice:
 
 *Primero recibió la comisión... y luego la desempeñó.*
 
@@ -456,21 +456,21 @@ En esta categoría quedan incluidas aquellas personas que son codiciosas y egoí
 
 Por diferentes modos y astucias innumerables... practican el engaño sobre los incautos y sencillos buscadores de la Verdad. Con la mira de servir a sus propios fines.
 
-Es por causa de tales imposturas... que el papel de Guru está siendo mal visto por la mayoría de la gente. Y no es de extrañarse... que la ciencia de la Espiritualidad esté siendo estigmatizada... como un espejismo... y como un paraíso para tontos.
+Es por causa de tales imposturas... que el papel de Gurú  está siendo mal visto por la mayoría de la gente. Y no es de extrañarse... que la ciencia de la Espiritualidad esté siendo estigmatizada... como un espejismo... y como un paraíso para tontos.
 
 #### Elementos claves que resalten de cada capitulo para hacer énfasis en el aprendizaje
 
-- Existen cuatro tipos de Maestros: padre... madre... preceptor... y *Satguru*. El *Satguru* imparte únicamente instrucción espiritual.
-- Según los logros espirituales... los Maestros se clasifican en *Sadh*... *Guru*... *Sant Satguru*... y *Param Sant Satguru*.
+- Existen cuatro tipos de Maestros: padre... madre... preceptor... y *Satgurú *. El *Satgurú * imparte únicamente instrucción espiritual.
+- Según los logros espirituales... los Maestros se clasifican en *Sadh*... *Gurú *... *Sant Satgurú *... y *Param Sant Satgurú *.
 - Algunos Santos nacen ya con autoridad. Son los *Swateh Sants*. Otros la adquieren mediante disciplina... y madurez espiritual.
 - No hay diferencia esencial entre ambos. Cada uno lleva a cabo el plan de Dios... según las necesidades de la era.
-- Los falsos maestros engañan a los buscadores... desacreditan el papel del Guru... y estigmatizan la espiritualidad.
+- Los falsos maestros engañan a los buscadores... desacreditan el papel del Gurú ... y estigmatizan la espiritualidad.
 
 ##### frases memorables del capítulo (crear un máximo de tres frases)
 
 - *Primero recibió la comisión... y luego la desempeñó.*
 - *El vino viejo se mantiene en circulación... para las almas sedientas.*
-- *El Satguru es el instructor más grande... pues imparte únicamente instrucciones espirituales.*
+- *El Satgurú  es el instructor más grande... pues imparte únicamente instrucciones espirituales.*
 
 
 
@@ -498,7 +498,7 @@ Kabir dice de sí mismo:
 
 
 
-Guru Nanak, también... fue investido de autoridad similar... para impartir instrucciones espirituales... cuando se encontraba en el desempeño de su misión.
+Gurú  Nanak, también... fue investido de autoridad similar... para impartir instrucciones espirituales... cuando se encontraba en el desempeño de su misión.
 
 
 
@@ -549,7 +549,7 @@ Así como la luz viene de la Luz... también viene la vida de la Vida. Y a un es
 
 
 
-También se dice que *Bani*... el Verbo o Principio del Sonido... es el Guru. Y el Guru es el *Bani* personificado. Y el elixir de Vida... emana del *Bani*.
+También se dice que *Bani*... el Verbo o Principio del Sonido... es el Gurú . Y el Gurú  es el *Bani* personificado. Y el elixir de Vida... emana del *Bani*.
 
 Quienquiera acepte lo que dice el *Gurbani*... puede ser liberado... mediante la gracia del Maestro viviente.
 
@@ -603,15 +603,15 @@ Todo esto... y mucho más... es el trabajo que tiene que hacer un Maestro vivien
 
 
 
-En la historia del sikhismo encontramos... que al Sagrado Granth lo compiló por primera vez el quinto Guru... Guru Arjan.
+En la historia del sikhismo encontramos... que al Sagrado Granth lo compiló por primera vez el quinto Gurú ... Gurú  Arjan.
 
-A pesar del bien conocido... y repetidamente citado aforismo de: *Bani es el Guru*... implicando con ello que no había necesidad de Gurus en lo sucesivo... los Gurus continuaron con la tarea de iniciar a la gente.
+A pesar del bien conocido... y repetidamente citado aforismo de: *Bani es el Gurú *... implicando con ello que no había necesidad de Gurú s en lo sucesivo... los Gurú s continuaron con la tarea de iniciar a la gente.
 
 Y aun hoy... el Puro... *Khalsa*... de Luz interna perfecta y resplandeciente... está autorizado a llevar a cabo el trabajo de proporcionar guía e instrucciones espirituales... a los buscadores de la Verdad.
 
 
 
-Guru Gobind Singh dice:
+Gurú  Gobind Singh dice:
 
 *Somos los adoradores de la Gran Luz Consciente.*
 
@@ -623,14 +623,14 @@ Y continúa diciendo:
 
 *Khalsa es mi verdadera forma... yo resido en Khalsa.*
 *Él es la vida de mi vida... y mi verdadero prano... aires vitales.*
-*Khalsa es mi amigo valeroso... Khalsa es mi Satguru Puro... Maestro totalmente capacitado.*
-*No he faltado a la verdad. Yo digo esto en la presencia de Par Brahm... y de Guru Nanak.*
+*Khalsa es mi amigo valeroso... Khalsa es mi Satgurú  Puro... Maestro totalmente capacitado.*
+*No he faltado a la verdad. Yo digo esto en la presencia de Par Brahm... y de Gurú  Nanak.*
 
 
 
 Debemos aclarar que existe una gran diferencia entre *Gurbani* y *Bani*.
 
-Lo primero se refiere a los dichos de los Gurus... según los registros de las escrituras sagradas... especialmente el Granth Sahib.
+Lo primero se refiere a los dichos de los Gurú s... según los registros de las escrituras sagradas... especialmente el Granth Sahib.
 
 Lo último hace referencia a la Corriente del Sonido eterno... a veces llamado *Gurki-Bani*... que reverbera en toda la creación.
 
@@ -644,7 +644,7 @@ Además... este *Bani*... *Naam* o Verbo... está sonando durante los cuatro *Yu
 - Los Maestros del pasado preparan el terreno... pero el trabajo directo de guía espiritual... lo realiza el Maestro viviente.
 - La espiritualidad no se puede comprar ni enseñar. Se capta... por infección... del Maestro que ya está plenamente cargado de Vida.
 - El Maestro viviente inyecta Su impulso de Vida... vivifica al alma... y la pilotea rumbo a Dios.
-- Las escrituras y los aforismos no sustituyen al Maestro encarnado. El *Bani* es el Guru... solo cuando es manifestado por un adepto.
+- Las escrituras y los aforismos no sustituyen al Maestro encarnado. El *Bani* es el Gurú ... solo cuando es manifestado por un adepto.
 
 ##### frases memorables del capítulo (crear un máximo de tres frases)
 
@@ -698,7 +698,7 @@ Por eso se hace el Verbo carne... y habita entre nosotros. Según lo aprendimos 
 
 
 
-Cuando los espíritus se inquietan de su largo exilio en el plano físico... y claman... desamparados... por regresar al hogar... sin poder ver la manera de salir de las garras del Poder Negativo... *Kal*... que todo lo abarca en forma de limitaciones de tiempo... espacio... y causación... entonces la Gracia Salvadora de Dios se conmueve con los lastimeros llamados. Y viene al mundo en la forma de un *Sant-Satguru*... Maestro de la Verdad... para ayudarlos a salir del atolladero.
+Cuando los espíritus se inquietan de su largo exilio en el plano físico... y claman... desamparados... por regresar al hogar... sin poder ver la manera de salir de las garras del Poder Negativo... *Kal*... que todo lo abarca en forma de limitaciones de tiempo... espacio... y causación... entonces la Gracia Salvadora de Dios se conmueve con los lastimeros llamados. Y viene al mundo en la forma de un *Sant-Satgurú *... Maestro de la Verdad... para ayudarlos a salir del atolladero.
 
 El Maestro viviente es quien puede hacer este trabajo. Ningún otro puede hacerlo.
 
@@ -788,7 +788,7 @@ Bhai Nandlal dice a este respecto:
 
 
 
-La necesidad de un Maestro o Guru... es absoluta. Y no puede haber excepción a la regla.
+La necesidad de un Maestro o Gurú ... es absoluta. Y no puede haber excepción a la regla.
 
 Supongan, por ejemplo... que una persona desea dar un paseo aéreo por diversión. Nadie le permitiría subir a un avión. Y si sube sin ser visto... encontrará el aparato bajo llave.
 
@@ -810,7 +810,7 @@ Si de una u otra forma... se encontrara momentáneamente liberado... y recogido 
 
 Si pudiese encontrar una entrada... no sabe a dónde ir. Cómo ir. Y cómo regresar.
 
-Pero si el maestro piloto... el *Sant Satguru*... pudiera estar ahí para llevar al espíritu consigo... y los dos pudieran entrar en el avión... y hacer juntos unos cuantos viajes felices por el reino espiritual... el espíritu podría también aprender cómo manejar la aeronave celestial. Y repetir los experimentos espirituales.
+Pero si el maestro piloto... el *Sant Satgurú *... pudiera estar ahí para llevar al espíritu consigo... y los dos pudieran entrar en el avión... y hacer juntos unos cuantos viajes felices por el reino espiritual... el espíritu podría también aprender cómo manejar la aeronave celestial. Y repetir los experimentos espirituales.
 
 
 
@@ -837,7 +837,7 @@ Esta riqueza puede solamente obtenerse de algún adepto del Verbo... *Naam*. Pue
 
 Solo Él... y nadie más... está capacitado para manifestárselo al espíritu.
 
-Es una ley fundamental de Dios... que nadie puede manifestar al Verbo... *Naam*... excepto el *Satguru*... el Maestro de la Verdad.
+Es una ley fundamental de Dios... que nadie puede manifestar al Verbo... *Naam*... excepto el *Satgurú *... el Maestro de la Verdad.
 
 El *Shabd* de un Alma Maestra... solo puede escucharse mediante Su gracia. Y nadie más puede siquiera hacerlo manifiesto.
 
@@ -868,7 +868,7 @@ Por la gracia de Dios... llega uno a encontrar a un Maestro de la Verdad.
 
 Después de haber pasado un espíritu por ciclos de nacimientos... le hace el Maestro escuchar la Corriente del Sonido.
 
-Escuchen todos con atención... y sepan que no existe filántropo más grandioso que un *Satguru*. Pues Él confiere a los *jivas*... el precioso don del *Naam*.
+Escuchen todos con atención... y sepan que no existe filántropo más grandioso que un *Satgurú *. Pues Él confiere a los *jivas*... el precioso don del *Naam*.
 
 Quienes estén preparados para perder su vida... es decir... para elevarse por encima de la vida física de los sentidos... encontrarán la Verdad... al entrar en contacto con un Alma Maestra.
 
@@ -878,16 +878,16 @@ Todos los Santos declaran al unísono... que sin un Hombre-Dios... no se puede a
 
 Dios mismo puso esto en claro con toda amplitud:
 
-*Es un principio cardinal de Dios... que uno no puede siquiera pensar en Él... sin la gracia de un Satguru.*
+*Es un principio cardinal de Dios... que uno no puede siquiera pensar en Él... sin la gracia de un Satgurú .*
 *Nanak ha aprendido de Dios... que uno no puede salvarse... sin la ayuda activa de un Maestro.*
 
 
 
-El *Satguru* es un gran oftalmólogo. Y un experto cirujano de ojos.
+El *Satgurú * es un gran oftalmólogo. Y un experto cirujano de ojos.
 
 Todos estamos totalmente ciegos. Dios está dentro de nosotros... y a oscuras lo buscamos a tientas externamente.
 
-Pero al entrar en contacto con un Maestro perfecto... *Satguru*... nos restaura la visión perdida. Y empezamos a realizar... y a experimentar a Dios... en el laboratorio de la mente humana.
+Pero al entrar en contacto con un Maestro perfecto... *Satgurú *... nos restaura la visión perdida. Y empezamos a realizar... y a experimentar a Dios... en el laboratorio de la mente humana.
 
 
 
@@ -910,7 +910,7 @@ Nanak nos dice:
 
 
 
-Guru Arjan nos dice... que aun una persona con ojos puede estar ciega... si no ve a Dios. Quien es la mismísima alma de su alma. Y por ello... comete pecados.
+Gurú  Arjan nos dice... que aun una persona con ojos puede estar ciega... si no ve a Dios. Quien es la mismísima alma de su alma. Y por ello... comete pecados.
 
 
 
@@ -951,14 +951,14 @@ Es imperativo que un aspirante a ello... lleve consigo a un adepto... que ande d
 
 - Dios compenetra todo como *Shabd*... pero solo un Maestro viviente puede conectarnos con esa Corriente.
 - El Maestro es el polo humano donde la energía divina se manifiesta. Sin él... no podemos beneficiarnos de la electricidad espiritual.
-- Ninguna práctica externa... caridad... o erudición... sustituye la necesidad del *Satguru*.
+- Ninguna práctica externa... caridad... o erudición... sustituye la necesidad del *Satgurú *.
 - El Maestro es barco y capitán a la vez. Sin Él... nadie cruza el océano de la vida.
 - Las escrituras de todas las religiones —Upanishads... Biblia... Corán... Gurbani— confirman esta necesidad absoluta.
 
 ##### frases memorables del capítulo (crear un máximo de tres frases)
 
 - *Nadie va al Padre... sino por Mí.*
-- *El Guru es al mismo tiempo... el barco... y el capitán.*
+- *El Gurú  es al mismo tiempo... el barco... y el capitán.*
 - *Sin un Maestro... nadie nunca encontró la Verdad. Ni en el pasado... ni en el presente.*
 
 
@@ -1007,7 +1007,7 @@ Juntamente con lo anterior... no tenemos posibilidad de comprender el trabajo de
 
 ### Sin un Maestro todo es oscuridad
 
-Sin un Maestro... Guru... estamos en completa oscuridad.
+Sin un Maestro... Gurú ... estamos en completa oscuridad.
 
 La realidad sigue siendo simplemente algo oculto. Y un espejismo.
 
@@ -1054,17 +1054,17 @@ Un Alma en cuerpo... *jiva*... está siempre en absoluta oscuridad.
 
 Si cierra los ojos... adentro hay oscuridad. Además... está envuelta en total ignorancia.
 
-A quien puede disipar esta oscuridad de las almas... *jivas*... se le llama un Guru. Maestro.
+A quien puede disipar esta oscuridad de las almas... *jivas*... se le llama un Gurú . Maestro.
 
 
 
-El término *Guru* consta de dos palabras. *Gu*... que significa oscuridad. Y *ru*... que significa Luz.
+El término *Gurú * consta de dos palabras. *Gu*... que significa oscuridad. Y *ru*... que significa Luz.
 
-Por tanto... *Guru* es aquel que nos puede conducir... de la oscuridad a la Luz. De la falsedad a la verdad. Y de la muerte... a la inmortalidad.
+Por tanto... *Gurú * es aquel que nos puede conducir... de la oscuridad a la Luz. De la falsedad a la verdad. Y de la muerte... a la inmortalidad.
 
 
 
-El ilustre poeta Kalidas... habla así del Guru:
+El ilustre poeta Kalidas... habla así del Gurú :
 
 *Él convierte la oscuridad en Luz.*
 *Y hace visible... al Dios invisible.*
@@ -1080,7 +1080,7 @@ Los Santos declaran... que sin un Alma Maestra que nos guíe... todas las obras 
 Kabir Sahib... por tanto... en términos muy definidos... nos previene contra actos de esta clase:
 
 *De barro... sencillamente... no puede hacer nada sin un Alma Maestra.*
-*Sin un benéfico Guru... nadie encuentra una salida.*
+*Sin un benéfico Gurú ... nadie encuentra una salida.*
 *Aunque ejecute millares de obras de caridad... y acciones meritorias.*
 
 
@@ -1095,7 +1095,7 @@ Nuevamente dice Tulsi Sahib:
 En el *Gurbani* encontramos... que en forma enfática... se hace referencia a la necesidad de un Maestro:
 
 *Que no quede la mínima duda en la mente de alguien.*
-*Pues nadie ha cruzado los mares tempestuosos y agitados de la vida... sin un Guru.*
+*Pues nadie ha cruzado los mares tempestuosos y agitados de la vida... sin un Gurú .*
 *El mundo es un terrible océano.*
 *El Verbo del Maestro es el barco... y Él es su capitán.*
 *Es con Su gracia... como uno puede llegar a Dios.*
@@ -1103,9 +1103,9 @@ En el *Gurbani* encontramos... que en forma enfática... se hace referencia a la
 
 
 
-*El Guru es al mismo tiempo... el barco... y el capitán.*
+*El Gurú  es al mismo tiempo... el barco... y el capitán.*
 *Y sin Él... nadie puede cruzar.*
-*Dios es el verdadero regalo del Guru.*
+*Dios es el verdadero regalo del Gurú .*
 *Y el camino de la salvación... es por medio de Él.*
 
 
@@ -1123,7 +1123,7 @@ En el *Katha Upanishad*... tenemos:
 #### Elementos claves que resalten de cada capitulo para hacer énfasis en el aprendizaje
 
 - Sin Maestro... el alma permanece en oscuridad total. Y no puede discernir la realidad.
-- El *Guru* disipa la oscuridad. *Gu* significa oscuridad... y *ru*... Luz.
+- El *Gurú * disipa la oscuridad. *Gu* significa oscuridad... y *ru*... Luz.
 - Solo la gracia del Maestro... saca al espíritu del plano de los sentidos... y lo conduce a la Luz.
 - Todas las obras meritorias —ayunos... peregrinaciones... rituales— no bastan sin un Alma Maestra.
 - El Maestro inicia al alma en el conocimiento esotérico... y la experiencia interna.
@@ -1131,7 +1131,7 @@ En el *Katha Upanishad*... tenemos:
 ##### frases memorables del capítulo (crear un máximo de tres frases)
 
 - *Sin un Maestro... existe una oscuridad cegadora.*
-- *Guru es aquel que nos puede conducir... de la oscuridad a la Luz... de la falsedad a la verdad... y de la muerte a la inmortalidad.*
+- *Gurú  es aquel que nos puede conducir... de la oscuridad a la Luz... de la falsedad a la verdad... y de la muerte a la inmortalidad.*
 - *El espíritu no se vuelve Espíritu... y no puede haber salvación para él.*
 
 
@@ -1140,7 +1140,7 @@ En el *Katha Upanishad*... tenemos:
 
 Contamos con el testimonio de la historia... para demostrar... que no puede uno por sí mismo... tener acceso a regiones espirituales.
 
-En los *Shastras* se menciona... que a Narad se le negó el acceso a *Vishnupuri*... la región de Vishnu... cuando por sí mismo intentó entrar en ese reino. Porque no había sido iniciado... por algún Maestro. Un Guru.
+En los *Shastras* se menciona... que a Narad se le negó el acceso a *Vishnupuri*... la región de Vishnu... cuando por sí mismo intentó entrar en ese reino. Porque no había sido iniciado... por algún Maestro. Un Gurú .
 
 
 
@@ -1160,7 +1160,7 @@ A pesar de sus antecedentes espirituales perfectos... tuvo que asociarse con San
 
 
 
-Guru Amar Das nos dice... que es Ley de Dios... que uno no pueda siquiera pensar en Él... sin que algún Maestro de la Verdad... nos lo haga recordar.
+Gurú  Amar Das nos dice... que es Ley de Dios... que uno no pueda siquiera pensar en Él... sin que algún Maestro de la Verdad... nos lo haga recordar.
 
 
 
@@ -1185,9 +1185,9 @@ Si estos personajes de alma elevada... cuyos dominios abarcan hasta la región C
 
 
 
-Guru Nanak enfáticamente declara... que la importancia de un Guru... puede conocerse por Brahma... Narad... y Ved Vyas:
+Gurú  Nanak enfáticamente declara... que la importancia de un Gurú ... puede conocerse por Brahma... Narad... y Ved Vyas:
 
-*¡Oh hermano! Sin un Guru... no puedes recibir la Verdad absoluta.*
+*¡Oh hermano! Sin un Gurú ... no puedes recibir la Verdad absoluta.*
 *Como opuesta al conocimiento relativo... por medio de la percepción de los sentidos.*
 *Pueden verificar esto... con las referencias de Brahma... Narad... y Vishnu.*
 
@@ -1210,11 +1210,11 @@ Tulsi Sahib dice:
 
 - *A Narad se le negó el acceso a Vishnupuri... porque no había sido iniciado por algún Maestro.*
 - *Hasta el Señor Rama... y el Señor Krishna... tuvieron que aceptar un Maestro.*
-- *Sin un Guru... no puedes recibir la Verdad absoluta.*
+- *Sin un Gurú ... no puedes recibir la Verdad absoluta.*
 
 
 
-### Antes y después de Guru Nanak
+### Antes y después de Gurú  Nanak
 
 Siempre hay alimento para el hambriento. Y agua para el sediento.
 
@@ -1228,9 +1228,9 @@ La ley de demanda y suministro... es ley inmutable en la naturaleza.
 
 Exactamente de la misma manera... trabaja también esta ley... en forma inexorable... en asuntos espirituales.
 
-Para los aspirantes de la época anterior a Guru Nanak... en esta era... o después... no puede la naturaleza sino proveer los medios... para satisfacer sus aspiraciones.
+Para los aspirantes de la época anterior a Gurú  Nanak... en esta era... o después... no puede la naturaleza sino proveer los medios... para satisfacer sus aspiraciones.
 
-El fijar límites a un periodo en particular... de uno o dos siglos... y señalarlo como el periodo de los Gurus... y decir que no había Almas Maestras antes o después de esa época en particular... está en contra de la ley fundamental de demanda y suministro. Y por ello... es incorrecto.
+El fijar límites a un periodo en particular... de uno o dos siglos... y señalarlo como el periodo de los Gurú s... y decir que no había Almas Maestras antes o después de esa época en particular... está en contra de la ley fundamental de demanda y suministro. Y por ello... es incorrecto.
 
 
 
@@ -1255,7 +1255,7 @@ Ellos expresan verdades eternas... que subsisten toda la eternidad. Y son la her
 
 ### Las escrituras y su valor
 
-El Guru es un ser altamente espiritual... con dominios que se extienden hasta *Sach Khand*.
+El Gurú  es un ser altamente espiritual... con dominios que se extienden hasta *Sach Khand*.
 
 Tiene un conocimiento directo de *And*... *Brahmand*... y *Sach Khand*. Las tres grandes divisiones. De la física... hasta los reinos puramente espirituales.
 
@@ -1265,7 +1265,7 @@ Libre de las garras del cuerpo y de la mente... está cargado de espiritualidad 
 
 A menos que un alma en cuerpo... *jiva*... entre en contacto con un ser así... sus aspiraciones espirituales latentes... no se avivan.
 
-El Maestro... Guru... es realmente una vela encendida... que enciende muchas velas apagadas. Él puede... al transmitir Su propio impulso de vida... vivificar a otros.
+El Maestro... Gurú ... es realmente una vela encendida... que enciende muchas velas apagadas. Él puede... al transmitir Su propio impulso de vida... vivificar a otros.
 
 
 
@@ -1313,7 +1313,7 @@ Quien nunca ha conocido la devoción... no puede conocer el valor de un Maestro.
 
 
 
-Hablando claramente... el término *Guru*... no es un apelativo que se da a cualquier persona.
+Hablando claramente... el término *Gurú *... no es un apelativo que se da a cualquier persona.
 
 Significa... y representa... un poder dinámico... que trabaja en... y a través de... una forma humana en particular. Y es el ideal para todos nosotros.
 
@@ -1341,7 +1341,7 @@ Kabir Sahib dice:
 - Estudiar libros sin un Maestro... es como un cucharón que no conoce el sabor del budín.
 - La esencia del conocimiento está en el *Dhuni*... el Principio del Sonido... no en la erudición.
 - La erudición sin devoción... no transforma el corazón.
-- El Guru es la lámpara encendida... que enciende otras velas apagadas.
+- El Gurú  es la lámpara encendida... que enciende otras velas apagadas.
 
 ##### frases memorables del capítulo (crear un máximo de tres frases)
 
@@ -1351,7 +1351,7 @@ Kabir Sahib dice:
 
 
 
-### El Maestro (Guru) es Superhombre u Hombre-Dios
+### El Maestro (Gurú ) es Superhombre u Hombre-Dios
 
 El Maestro es en verdad... la perfecta manifestación de Dios.
 
@@ -1419,7 +1419,7 @@ Pues únicamente Él... es digno de ser adorado.
 
 Al igual que la electricidad en la atmósfera... está el universo cargado completamente de Dios. No hay lugar donde Él no esté.
 
-Empero... Él está oculto para la vista. Y el Maestro... o Guru... es el poderoso interruptor. La fuente... y divinidad... que nos da acceso.
+Empero... Él está oculto para la vista. Y el Maestro... o Gurú ... es el poderoso interruptor. La fuente... y divinidad... que nos da acceso.
 
 
 
@@ -1445,19 +1445,19 @@ Brahma... Vishnu... Shiva... Ishwar... *niranjan*... y Parmeshwar... encarnacion
 
 Hemos leído mucho sobre ellos... en forma religiosa... en tratados sagrados. Figuran como héroes y heroínas... en historias mitológicas. Pero como tales... no son sino ficciones de la imaginación humana.
 
-Cuando el Maestro... o *Satguru* de la Verdad... toma a su cargo a un espíritu... en el *Gaggan*... Él gradualmente revela... el verdadero significado y forma de cada uno de ellos.
+Cuando el Maestro... o *Satgurú * de la Verdad... toma a su cargo a un espíritu... en el *Gaggan*... Él gradualmente revela... el verdadero significado y forma de cada uno de ellos.
 
 
 
 Todos ellos han existido desde el comienzo de la creación. Y están ocupados en llevar a cabo... las obligaciones que a cada uno les han sido asignadas.
 
-Pero no podemos conocerlos... ni conocer su labor y su autoridad... a menos que el *Satguru* nos lleve... y nos muestre la naturaleza de esta misteriosa jerarquía.
+Pero no podemos conocerlos... ni conocer su labor y su autoridad... a menos que el *Satgurú * nos lleve... y nos muestre la naturaleza de esta misteriosa jerarquía.
 
 
 
 Dios Mismo... en la vestimenta del hombre... Santos y Profetas... nos informa sobre Su propio ser natural.
 
-Así... Guru Ram Das ha declarado:
+Así... Gurú  Ram Das ha declarado:
 
 *Es el principio básico de Dios... que sin un Maestro de la Verdad... nadie puede siquiera pensar en Él.*
 
@@ -1468,7 +1468,7 @@ Sant Kabir también nos dice:
 *El Maestro es más grandioso que Dios.*
 *Bien pueden ustedes pensar en esta sentencia.*
 *La devoción a Dios... mantiene a una persona enredada en este lado. El plano físico.*
-*Pero la devoción al Guru... la lleva a Dios.*
+*Pero la devoción al Gurú ... la lleva a Dios.*
 
 
 
@@ -1476,7 +1476,7 @@ La grandeza del Maestro descansa en esto: que Él conecta al alma... con la Real
 
 La Superalma... aun cuando haya estado con nosotros... no pudo ni manifestarse directamente... ni sacar al alma del plano físico... y liberarla.
 
-Únicamente por medio de las instrucciones de un Alma Maestra... u Hombre-Dios... Guru... y la asociación con el Verbo... o Dios-en-Acción... *Shabd*... puede uno lograr estos resultados maravillosos.
+Únicamente por medio de las instrucciones de un Alma Maestra... u Hombre-Dios... Gurú ... y la asociación con el Verbo... o Dios-en-Acción... *Shabd*... puede uno lograr estos resultados maravillosos.
 
 
 
@@ -1528,7 +1528,7 @@ A este respecto... una devota dama... Sehjo Bai... nos canta en melodiosos acord
 - El Maestro es la manifestación perfecta de Dios. Es portador de la antorcha divina.
 - Dios desciende en forma humana... para redimir a las almas... y abrir el Reino de los Cielos.
 - En el Maestro moran Dios y el Mediador. No hay distinción real entre ellos.
-- Brahma... Vishnu... y Shiva... son poderes que el Satguru revela en su verdadera naturaleza.
+- Brahma... Vishnu... y Shiva... son poderes que el Satgurú  revela en su verdadera naturaleza.
 - El Maestro es el polo... desde el cual Dios ejecuta Su plan de redención.
 
 ##### frases memorables del capítulo (crear un máximo de tres frases)
@@ -1555,7 +1555,7 @@ El Maestro... es la única esperanza... para la humanidad errada.
 
 Cuando los espíritus se inquietan de su largo exilio en el plano físico... y claman... desamparados... por regresar al hogar... sin poder ver la manera de salir de las garras del Poder Negativo... *Kal*... que todo lo abarca en forma de limitaciones de tiempo... espacio... y causación... entonces la Gracia Salvadora de Dios se conmueve... con los lastimeros llamados.
 
-Y viene al mundo... en la forma de un *Sant-Satguru*... Maestro de la Verdad... para ayudarlos a salir del atolladero.
+Y viene al mundo... en la forma de un *Sant-Satgurú *... Maestro de la Verdad... para ayudarlos a salir del atolladero.
 
 El Maestro viviente es quien puede hacer este trabajo. Ningún otro puede hacerlo.
 
@@ -1573,7 +1573,7 @@ El Maestro viviente es quien puede hacer este trabajo. Ningún otro puede hacerl
 
 - *Un Maestro viviente... es la única esperanza para la humanidad errada.*
 - *Ayuda a los jivas... a cruzar ilesos... el océano de la vida.*
-- *La Gracia Salvadora de Dios se conmueve... y viene al mundo en la forma de un Sant-Satguru.*
+- *La Gracia Salvadora de Dios se conmueve... y viene al mundo en la forma de un Sant-Satgurú .*
 
 
 
@@ -1693,7 +1693,7 @@ El amor de los aspirantes... gradualmente se desarrolla... hasta volverse una fi
 
 Incontables son las obligaciones y responsabilidades de un Maestro.
 
-Su primera y principal labor... es la de enlazar de nuevo... al creado con el Creador. Ganando para Él... el Reino de Dios. Y restituirlo a su antiguo y olvidado linaje... y herencia.
+Su primera y principal labor... es la de enlazar de nuevo... al creado con el Creador. Ganar para Él... el Reino de Dios. Y restituirlo a su antiguo y olvidado linaje... y herencia.
 
 Esto lo hace por medio del Verbo... o *Shabd*... que lleva al espíritu... a su Hogar nativo.
 
@@ -1735,7 +1735,7 @@ Quienquiera que tenga algo que ver con el Alma Maestra... tiene finalmente que s
 
 
 
-### El Maestro (Guru) es el Hombre-Dios
+### El Maestro (Gurú ) es el Hombre-Dios
 
 El Maestro es en verdad... la perfecta manifestación de Dios.
 
@@ -1803,7 +1803,7 @@ Pues únicamente Él... es digno de ser adorado.
 
 Al igual que la electricidad en la atmósfera... está el universo cargado completamente de Dios. No hay lugar donde Él no esté.
 
-Empero... Él está oculto para la vista. Y el Maestro... o Guru... es el poderoso interruptor. La fuente... y divinidad... que nos da acceso.
+Empero... Él está oculto para la vista. Y el Maestro... o Gurú ... es el poderoso interruptor. La fuente... y divinidad... que nos da acceso.
 
 
 
@@ -1829,19 +1829,19 @@ Brahma... Vishnu... Shiva... Ishwar... *niranjan*... y Parmeshwar... encarnacion
 
 Hemos leído mucho sobre ellos... en forma religiosa... en tratados sagrados. Figuran como héroes y heroínas... en historias mitológicas. Pero como tales... no son sino ficciones de la imaginación humana.
 
-Cuando el Maestro... o *Satguru* de la Verdad... toma a su cargo a un espíritu... en el *Gaggan*... Él gradualmente revela... el verdadero significado y forma de cada uno de ellos.
+Cuando el Maestro... o *Satgurú * de la Verdad... toma a su cargo a un espíritu... en el *Gaggan*... Él gradualmente revela... el verdadero significado y forma de cada uno de ellos.
 
 
 
 Todos ellos han existido desde el comienzo de la creación. Y están ocupados en llevar a cabo... las obligaciones que a cada uno les han sido asignadas.
 
-Pero no podemos conocerlos... ni conocer su labor y su autoridad... a menos que el *Satguru* nos lleve... y nos muestre la naturaleza de esta misteriosa jerarquía.
+Pero no podemos conocerlos... ni conocer su labor y su autoridad... a menos que el *Satgurú * nos lleve... y nos muestre la naturaleza de esta misteriosa jerarquía.
 
 
 
 Dios Mismo... en la vestimenta del hombre... Santos y Profetas... nos informa sobre Su propio ser natural.
 
-Así... Guru Ram Das ha declarado:
+Así... Gurú  Ram Das ha declarado:
 
 *Es el principio básico de Dios... que sin un Maestro de la Verdad... nadie puede siquiera pensar en Él.*
 
@@ -1852,7 +1852,7 @@ Sant Kabir también nos dice:
 *El Maestro es más grandioso que Dios.*
 *Bien pueden ustedes pensar en esta sentencia.*
 *La devoción a Dios... mantiene a una persona enredada en este lado. El plano físico.*
-*Pero la devoción al Guru... la lleva a Dios.*
+*Pero la devoción al Gurú ... la lleva a Dios.*
 
 
 
@@ -1860,7 +1860,7 @@ La grandeza del Maestro descansa en esto: que Él conecta al alma... con la Real
 
 La Superalma... aun cuando haya estado con nosotros... no pudo ni manifestarse directamente... ni sacar al alma del plano físico... y liberarla.
 
-Únicamente por medio de las instrucciones de un Alma Maestra... u Hombre-Dios... Guru... y la asociación con el Verbo... o Dios-en-Acción... *Shabd*... puede uno lograr estos resultados maravillosos.
+Únicamente por medio de las instrucciones de un Alma Maestra... u Hombre-Dios... Gurú ... y la asociación con el Verbo... o Dios-en-Acción... *Shabd*... puede uno lograr estos resultados maravillosos.
 
 
 
@@ -1913,7 +1913,7 @@ A este respecto... una devota dama... Sehjo Bai... nos canta en melodiosos acord
 - Dios y el Hombre-Dios... son como el mar y sus mareas. Misma esencia.
 - El Maestro es la forma visible del Dios sin forma. Es el interruptor... que conecta con la energía divina.
 - Su grandeza supera incluso la devoción directa a Dios... pues Él es quien otorga el *Naam*.
-- Cristo... Kabir... Shamas-i-Tabrez... y Guru Arjan... atestiguan la unidad con el Padre.
+- Cristo... Kabir... Shamas-i-Tabrez... y Gurú  Arjan... atestiguan la unidad con el Padre.
 
 ##### frases memorables del capítulo (crear un máximo de tres frases)
 
@@ -1923,20 +1923,20 @@ A este respecto... una devota dama... Sehjo Bai... nos canta en melodiosos acord
 
 
 
-### Gurudev: La forma astral o auto-luminosa del Maestro
+### Gurú dev: La forma astral o auto-luminosa del Maestro
 
-Un verdadero Maestro... Guru... es la manifestación real de Dios.
+Un verdadero Maestro... Gurú ... es la manifestación real de Dios.
 
-Él es... de hecho... el *Satguru*... o Maestro de la Verdad. Y manifiesta en el mundo... la luz de la Verdad.
-
-
-
-*¡Oh Nanak! El Guru es el Satguru.*
-*Me gustaría tocar los pies del Satguru.*
+Él es... de hecho... el *Satgurú *... o Maestro de la Verdad. Y manifiesta en el mundo... la luz de la Verdad.
 
 
 
-Por lo tanto... el término *Guru Dev*... significa la forma auto-luminosa del Maestro. La que está liberada del cuerpo. Y muy por encima de él.
+*¡Oh Nanak! El Gurú  es el Satgurú .*
+*Me gustaría tocar los pies del Satgurú .*
+
+
+
+Por lo tanto... el término *Gurú  Dev*... significa la forma auto-luminosa del Maestro. La que está liberada del cuerpo. Y muy por encima de él.
 
 Y a la cual... el espíritu realmente percibe... con su Luz interna.
 
@@ -1944,7 +1944,7 @@ Cuando el espíritu se encuentra cara a cara... con el Maestro astral... toda du
 
 
 
-*El Gurudev da sazón a los ojos.*
+*El Gurú dev da sazón a los ojos.*
 *Toda duda se desvanece.*
 *Y el trabajo del amor... recibe su gloriosa... sublime recompensa.*
 
@@ -1958,7 +1958,7 @@ Mateo, capítulo seis, versículo veintidós.
 
 
 
-Guru Arjan nos dice... que la forma bendita del Maestro... se manifiesta a sí misma... en la frente de un devoto.
+Gurú  Arjan nos dice... que la forma bendita del Maestro... se manifiesta a sí misma... en la frente de un devoto.
 
 
 
@@ -1978,35 +1978,35 @@ Es esta forma astral... o auto-luminosa del Maestro... la que lleva al espíritu
 
 
 
-No existe distinción entre el Maestro... *Guru*... y *Guru Dev*... y *Satguru*... y Dios.
+No existe distinción entre el Maestro... *Gurú *... y *Gurú  Dev*... y *Satgurú *... y Dios.
 
 Es una y la misma corriente de compasión divina... que asume diferentes nombres... en diferentes regiones.
 
 
 
-Siguiendo la Ley de la similitud... al materializarse la Corriente Divina en el plano físico... para beneficio de los aspirantes... se le da el nombre de *Guru*... o Maestro. Quien por medio de las palabras de Su boca... imparte las instrucciones... como cualquier otro profesor lo haría.
+Siguiendo la Ley de la similitud... al materializarse la Corriente Divina en el plano físico... para beneficio de los aspirantes... se le da el nombre de *Gurú *... o Maestro. Quien por medio de las palabras de Su boca... imparte las instrucciones... como cualquier otro profesor lo haría.
 
 
 
 Cuando el espíritu de un aspirante abandona el cuerpo... y está listo para el viaje en los planos astrales o causales... esa misma Corriente Divina... asume una forma similar... para beneficio y guía del alma.
 
-A esta forma astral... desligada de la forma corpórea del Maestro... se le llama *Guru Dev*.
+A esta forma astral... desligada de la forma corpórea del Maestro... se le llama *Gurú  Dev*.
 
 Es luminosa... y refulgente por sí misma... con luz que se extiende millas y millas.
 
 
 
-El *Satguru*... o Maestro de la Verdad... es el Poder de la Verdad de Dios. Que trabaja tanto por medio del *Guru*... como del *Guru Dev*.
+El *Satgurú *... o Maestro de la Verdad... es el Poder de la Verdad de Dios. Que trabaja tanto por medio del *Gurú *... como del *Gurú  Dev*.
 
-Con raíces firmemente incrustadas en *Sat*... o la Verdad... deriva directamente Su inspiración... de la eterna e incambiable permanencia... *Sat*. De ahí que se le conozca como *Satguru*.
+Con raíces firmemente incrustadas en *Sat*... o la Verdad... deriva directamente Su inspiración... de la eterna e incambiable permanencia... *Sat*. De ahí que se le conozca como *Satgurú *.
 
 
 
 De esta forma vemos... como el *Sat Dhara*... o corriente que viene de *Sat*... fluye hacia abajo... creando región sobre región... mucho más abajo. Terminando en el plano físico.
 
-Esta es la misma Corriente... que también ayuda a llevar a las almas... o *jivas*... de regreso a su hogar. Y es diversamente conocida como: *Guru*... *Guru Dev*... y *Satguru*... en diferentes lugares.
+Esta es la misma Corriente... que también ayuda a llevar a las almas... o *jivas*... de regreso a su hogar. Y es diversamente conocida como: *Gurú *... *Gurú  Dev*... y *Satgurú *... en diferentes lugares.
 
-Hasta que se alcanzan las raíces mismas de *Sat*. Y aquí... el espíritu exclama maravillado: *Wah-i-Guru*. Que significa: ¡Qué gloria es la tuya, oh Guru!
+Hasta que se alcanzan las raíces mismas de *Sat*. Y aquí... el espíritu exclama maravillado: *Wah-i-Gurú *. Que significa: ¡Qué gloria es la tuya, oh Gurú !
 
 Indescriptible... y más allá de toda comprensión.
 
@@ -2023,7 +2023,7 @@ Maulana Rumi nos dice:
 
 
 
-Guru Nanak se refiere a este Sendero iluminado así:
+Gurú  Nanak se refiere a este Sendero iluminado así:
 
 *La forma luminosa del Maestro... es maravillosamente arrebatadora... y encantadora.*
 *Solo un Maestro perfecto... puede manifestar esto a un espíritu.*
@@ -2040,7 +2040,7 @@ Hasta los Santos adoran también a esta forma. Y derivan de ella... un deleite e
 
 
 
-*Los benditos pies del bienamado Gurudev... son adorados por los Santos.*
+*Los benditos pies del bienamado Gurú dev... son adorados por los Santos.*
 *Los bienamados de Dios.*
 
 
@@ -2074,24 +2074,24 @@ Es la forma que guía a los aspirantes... a su meta.
 
 
 
-*Gurudev está en el comienzo de la creación.*
+*Gurú dev está en el comienzo de la creación.*
 *Él está en el comienzo de cada era... y continúa de era en era.*
-*Únicamente por medio del Gurudev... puede uno llegar a Hari.*
+*Únicamente por medio del Gurú dev... puede uno llegar a Hari.*
 
 
 
-Guru Arjan habla del *Guru Dev* así:
+Gurú  Arjan habla del *Gurú  Dev* así:
 
-*Salutaciones al Eterno Guru... Hari Rai.*
-*Salutaciones al Guru de la era... Sat Purush... o Ram Rai.*
-*Salutaciones al Satguru... la manifestación de Sat Purush.*
-*Salutaciones a Gurudev... la refulgente y autoluminosa forma del Guru.*
-*El vínculo entre el Guru y el Satguru.*
+*Salutaciones al Eterno Gurú ... Hari Rai.*
+*Salutaciones al Gurú  de la era... Sat Purush... o Ram Rai.*
+*Salutaciones al Satgurú ... la manifestación de Sat Purush.*
+*Salutaciones a Gurú dev... la refulgente y autoluminosa forma del Gurú .*
+*El vínculo entre el Gurú  y el Satgurú .*
 *Responsable de guiar y conducir al espíritu... a través de los diversos planos.*
 
 
 
-*Guru Dev*... es la manifestación más grandiosa... y más elevada... de *Sat Purush*.
+*Gurú  Dev*... es la manifestación más grandiosa... y más elevada... de *Sat Purush*.
 
 Es el poder controlador de Dios. Y puede conceder salvación.
 
@@ -2099,27 +2099,27 @@ Por medio de la devoción a Él... recibe uno plena confortación.
 
 
 
-*Nada sino Verdad eterna... Sat... es Gurudev.*
+*Nada sino Verdad eterna... Sat... es Gurú dev.*
 *Aparte de esta... falsa es toda otra adoración.*
 
 
 
-Guru Arjan... en sus memorables palabras... canta la grandeza de *Guru Dev* en esta forma:
+Gurú  Arjan... en sus memorables palabras... canta la grandeza de *Gurú  Dev* en esta forma:
 
-*Gurudev es padre. Gurudev es madre. Y Él es el Maestro... y Dios Mismo.*
-*Gurudev es un verdadero amigo. El que hace desaparecer la oscura ignorancia... y rompe todas las ataduras.*
-*Gurudev es el otorgador del Naam... un encantamiento que ahuyenta todo lo maligno.*
-*Gurudev es la personificación de la paz... la verdad... y la inteligencia. Y realmente... una piedra filosofal.*
-*Gurudev es un lugar de peregrinación... fuente de elixir de Vida... y Luz de la razón.*
-*Gurudev todo lo ordena... destruye los pecados... y purifica a los pecadores.*
-*Gurudev es eterno desde la creación... y el comienzo de cada era. Y Su palabra... tiene una gracia salvadora.*
-*Gurudev es el don más grande de Dios. El cual... si es concedido... salva a los peores pecadores.*
-*Gurudev es Satguru... Par Brahm... y Parmeshwar.*
+*Gurú dev es padre. Gurú dev es madre. Y Él es el Maestro... y Dios Mismo.*
+*Gurú dev es un verdadero amigo. El que hace desaparecer la oscura ignorancia... y rompe todas las ataduras.*
+*Gurú dev es el otorgador del Naam... un encantamiento que ahuyenta todo lo maligno.*
+*Gurú dev es la personificación de la paz... la verdad... y la inteligencia. Y realmente... una piedra filosofal.*
+*Gurú dev es un lugar de peregrinación... fuente de elixir de Vida... y Luz de la razón.*
+*Gurú dev todo lo ordena... destruye los pecados... y purifica a los pecadores.*
+*Gurú dev es eterno desde la creación... y el comienzo de cada era. Y Su palabra... tiene una gracia salvadora.*
+*Gurú dev es el don más grande de Dios. El cual... si es concedido... salva a los peores pecadores.*
+*Gurú dev es Satgurú ... Par Brahm... y Parmeshwar.*
 *Salutaciones a Él... ¡oh Nanak!*
 
 
 
-El *Gurbani* nos habla del inmenso beneficio... que uno disfruta... al encontrar al *Guru Dev*.
+El *Gurbani* nos habla del inmenso beneficio... que uno disfruta... al encontrar al *Gurú  Dev*.
 
 Los cinco pecados mortales: lujuria... ira... codicia... vanidad... y egoísmo... sencillamente se desvanecen.
 
@@ -2131,25 +2131,25 @@ Aun en el mundo... quedan cumplidos todos los deseos del alma. De ahí en adelan
 
 
 
-En esta Era de Hierro... *Kali Yuga*... de iniquidad y oscuridad... el *Guru Dev* es como la luz de un faro... en el tormentoso mar de la vida. Y con seguridad... guía a los pecadores... al Cielo de paz y bienaventuranza.
+En esta Era de Hierro... *Kali Yuga*... de iniquidad y oscuridad... el *Gurú  Dev* es como la luz de un faro... en el tormentoso mar de la vida. Y con seguridad... guía a los pecadores... al Cielo de paz y bienaventuranza.
 
 Un alma salvada... a su vez... jala a todos los que están cerca de ella... y le son queridos.
 
-La manifestación del *Guru Dev*... depende puramente de la gracia de Dios... y de los méritos especiales de uno... en su progreso en el Sendero Espiritual.
+La manifestación del *Gurú  Dev*... depende puramente de la gracia de Dios... y de los méritos especiales de uno... en su progreso en el Sendero Espiritual.
 
 #### Elementos claves que resalten de cada capitulo para hacer énfasis en el aprendizaje
 
-- *Gurudev* es la forma radiante del Maestro... liberada del cuerpo físico.
+- *Gurú dev* es la forma radiante del Maestro... liberada del cuerpo físico.
 - Esta forma astral... acompaña y guía al espíritu... a través de los planos internos.
-- Es la manifestación más elevada de *Sat Purush*. Es el vínculo entre el Guru y el Satguru.
+- Es la manifestación más elevada de *Sat Purush*. Es el vínculo entre el Gurú  y el Satgurú .
 - Su visión desvanece toda duda... y recompensa el trabajo del amor.
-- El *Gurudev* es padre... madre... amigo... y otorgador del *Naam*.
+- El *Gurú dev* es padre... madre... amigo... y otorgador del *Naam*.
 
 ##### frases memorables del capítulo (crear un máximo de tres frases)
 
-- *El Gurudev da sazón a los ojos. Toda duda se desvanece.*
+- *El Gurú dev da sazón a los ojos. Toda duda se desvanece.*
 - *La Forma Bendita del Maestro... está en mi frente.*
-- *Nada sino Verdad eterna... Sat... es Gurudev.*
+- *Nada sino Verdad eterna... Sat... es Gurú dev.*
 
 
 
@@ -2175,7 +2175,7 @@ El Maestro empieza exactamente igual que un profesor común. E imparte instrucci
 
 Con el tiempo... demuestra Él la autoridad de un Maestro... o *Murshid*... en el Sendero.
 
-Y finalmente... se le ve encausado en la Verdad... o *Sat*... como un *Satguru*... o el Maestro de la Verdad.
+Y finalmente... se le ve encausado en la Verdad... o *Sat*... como un *Satgurú *... o el Maestro de la Verdad.
 
 Hasta que llega a la etapa... en que Él y Dios... parecen fusionados el uno en el otro. Sin ninguna línea de demarcación entre ellos.
 
@@ -2184,14 +2184,14 @@ Hasta que llega a la etapa... en que Él y Dios... parecen fusionados el uno en 
 - El *Murshid-Kamil* es el Maestro completo y perfecto... que ha trascendido los tres planos.
 - Un *Sadh* puede guiar inicialmente... pero para la liberación total... se necesita un Santo perfecto.
 - El Maestro perfecto no tiene marcas externas. Se le conoce gradualmente... por contacto personal.
-- Comienza como amigo. Luego se revela como Maestro. Y finalmente... como *Satguru*... fusionado con Dios.
+- Comienza como amigo. Luego se revela como Maestro. Y finalmente... como *Satgurú *... fusionado con Dios.
 - Su grandeza... se muestra proporcionalmente al progreso del discípulo.
 
 ##### frases memorables del capítulo (crear un máximo de tres frases)
 
 - *El Maestro no puede descubrir toda su Grandeza... de una vez.*
 - *Un Maestro perfecto... no tiene marca distintiva alguna en Su persona.*
-- *Se le ve encausado en la Verdad... como un Satguru.*
+- *Se le ve encausado en la Verdad... como un Satgurú .*
 
 
 
@@ -2244,7 +2244,7 @@ Y a menos que uno esté preparado a sacrificar su todo... cuerpo... mente... y p
 
 
 
-*Cuando el discípulo... chela... está listo... el Guru aparece.*
+*Cuando el discípulo... chela... está listo... el Gurú  aparece.*
 
 Es la Ley de Dios.
 
@@ -2287,7 +2287,7 @@ Hasta que en la región puramente espiritual... *Muqam-i-Haq*... o *Sach Khand*.
 ##### frases memorables del capítulo (crear un máximo de tres frases)
 
 - *Pide... y se te dará. Busca... y encontrarás. Toca... y se te abrirá.*
-- *Cuando el discípulo está listo... el Guru aparece.*
+- *Cuando el discípulo está listo... el Gurú  aparece.*
 - *Ningún hombre viene a Mí... excepto aquel a quien el Padre me mandó acercarlo.*
 
 
@@ -2548,7 +2548,7 @@ Una lengua maligna... o un calumniador... hace el trabajo de un portero... *darw
 
 
 
-En la biografía de Bhai Bala está registrado... que en una ocasión... Guru Nanak dijo:
+En la biografía de Bhai Bala está registrado... que en una ocasión... Gurú  Nanak dijo:
 
 *En Kal Yuga... muchos Santos... o manifestaciones de Dios... bajarán para el bien de la sufriente humanidad.*
 
@@ -2715,7 +2715,7 @@ Desde el momento en que un individuo encuentra a un Maestro... tiene asegurados.
 
 
 
-Un *Sant Satguru*... es verdaderamente el Hijo de Dios.
+Un *Sant Satgurú *... es verdaderamente el Hijo de Dios.
 
 Él tiene amor genuino por igual... para las personas de todas las religiones... nacionalidades... y países.
 
@@ -2737,7 +2737,7 @@ Un *Sant Satguru*... es verdaderamente el Hijo de Dios.
 
 
 
-### Unicidad de Guru, Gurudev, Satguru y Malik
+### Unicidad de Gurú , Gurú dev, Satgurú  y Malik
 
 En las escrituras leemos... que Dios es Sin Forma.
 
@@ -2867,7 +2867,7 @@ Mientras hace Su trabajo entre nosotros... todos los días... y a Su dulce volun
 *El Maestro de la Verdad... y la Verdad... son uno.*
 *Pues Él es la Verdad polarizada.*
 *Él está más allá de todo. Más allá de Brahma... el Principio Primordial.*
-*Nanak se ha encontrado con tal Guru.*
+*Nanak se ha encontrado con tal Gurú .*
 *El Maestro de la Verdad... es eternamente el mismo.*
 *Ni viene... ni va.*
 *Él es el Principio de la Vida imperecedera... que lo compenetra todo.*
@@ -2892,7 +2892,7 @@ En el *Gurbani* se menciona... que después de cuidadoso escrutinio interno... u
 
 
 *Al agitar el gran mar interno... una cosa salió a la superficie.*
-*El Guru es Gobind... y Gobind es el Guru.*
+*El Gurú  es Gobind... y Gobind es el Gurú .*
 *¡Oh Nanak! No hay diferencia... entre los dos.*
 
 
@@ -2953,10 +2953,10 @@ Dios no tiene forma. Mientras está en el Hombre-Dios... asume forma... para ins
 
 
 
-*Nanak... después de cuidadoso estudio de los Vedas... ha llegado a la conclusión... de que no hay diferencia... entre Parbrahm... y el Guru.*
+*Nanak... después de cuidadoso estudio de los Vedas... ha llegado a la conclusión... de que no hay diferencia... entre Parbrahm... y el Gurú .*
 *Dios es el Primordial Principio del Sonido.*
 *El cual se otorga a los sedientos... mediante un Hombre-Dios.*
-*Dios reside en un Guru... y otorga la Corriente del Sonido... entre los aspirantes.*
+*Dios reside en un Gurú ... y otorga la Corriente del Sonido... entre los aspirantes.*
 
 
 
@@ -2979,7 +2979,7 @@ Juan, capítulo uno, versículo catorce.
 
 En el *Gurbani* leemos:
 
-*No existe ni la más mínima diferencia... entre el Satguru... y Swami. Dios-en-Acción... y Dios.*
+*No existe ni la más mínima diferencia... entre el Satgurú ... y Swami. Dios-en-Acción... y Dios.*
 
 
 
@@ -2987,21 +2987,21 @@ Un contacto con el primero... lleva a la devoción por el último.
 
 
 
-*A un hombre de Dios... se le llama Satguru... o Sat Purush.*
+*A un hombre de Dios... se le llama Satgurú ... o Sat Purush.*
 *Y Él habla solo de Hari.*
 *Cualesquiera que Lo escuche... logra la salvación.*
 
 
 
-Al ser el Maestro... Guru... uno con el Todopoderoso... es el hacedor de todo. Y sostiene la creación entera. Incluyendo a las almas en cuerpo... *jivas*.
+Al ser el Maestro... Gurú ... uno con el Todopoderoso... es el hacedor de todo. Y sostiene la creación entera. Incluyendo a las almas en cuerpo... *jivas*.
 
 
 
-*El Guru es el Hacedor... y todo lo hace.*
+*El Gurú  es el Hacedor... y todo lo hace.*
 *Él es el verdadero Gurmukh.*
-*El Guru es un colaborador consciente de Dios.*
+*El Gurú  es un colaborador consciente de Dios.*
 *Y es el sustentador de la creación entera.*
-*El Guru es el otorgador de paz y solaz.*
+*El Gurú  es el otorgador de paz y solaz.*
 *Y es Kartar... la gran energía motora.*
 *¡Oh Nanak! Nosotros vivimos... y tenemos nuestro ser... tan solo en Él.*
 
@@ -3009,7 +3009,7 @@ Al ser el Maestro... Guru... uno con el Todopoderoso... es el hacedor de todo. Y
 
 Gosain Tulsi Das... el célebre autor del Ramayana hindú... habla así del Maestro:
 
-*Salutación al loto del Guru.*
+*Salutación al loto del Gurú .*
 *Quien es el océano de misericordia... y Dios Mismo... en forma humana.*
 *Sus palabras bondadosas... dispersan en nosotros... la oscuridad nacida de ciegos apegos.*
 
@@ -3048,7 +3048,7 @@ Juan, capítulo catorce, versículos ocho al diez.
 
 
 
-Guru Arjan nos ha hablado en términos muy explícitos... de su unicidad con Dios:
+Gurú  Arjan nos ha hablado en términos muy explícitos... de su unicidad con Dios:
 
 *Mis templos están en los más altos cielos... y mi Reino es ilimitado.*
 *Mi dominio es eterno... e incontable es mi riqueza.*
@@ -3062,9 +3062,9 @@ Guru Arjan nos ha hablado en términos muy explícitos... de su unicidad con Dio
 
 En las escrituras hindúes tenemos:
 
-*Guru es Brahma. Guru es Vishnu. Guru es Shiva.*
-*Y Guru es el verdadero Par Brahm.*
-*Y nosotros ofrecemos nuestras salutaciones... al Guru.*
+*Gurú  es Brahma. Gurú  es Vishnu. Gurú  es Shiva.*
+*Y Gurú  es el verdadero Par Brahm.*
+*Y nosotros ofrecemos nuestras salutaciones... al Gurú .*
 
 
 
@@ -3109,7 +3109,7 @@ Santos musulmanes también parecen corroborar esto... de acuerdo a Maulana Rumi:
 Asimismo Maulana Rumi dice:
 
 *La Luz de la Verdad... brilla en el corazón de un Wali. Un Hombre-Dios.*
-*Si eres un momin... un hombre del Guru... puedes ver esto... tal y como es.*
+*Si eres un momin... un hombre del Gurú ... puedes ver esto... tal y como es.*
 
 
 
@@ -3180,7 +3180,7 @@ Donde ellos encuentran al Maestro... en Su forma radiante. Más brillante... que
 
 
 
-Guru Arjan nos dice... que Aquel que nos mandó al exilio... nos está ahora llamando... para que regresemos a Su Reino... como Sus verdaderos herederos... y legatarios.
+Gurú  Arjan nos dice... que Aquel que nos mandó al exilio... nos está ahora llamando... para que regresemos a Su Reino... como Sus verdaderos herederos... y legatarios.
 
 
 
@@ -3203,7 +3203,7 @@ Quien trate de distinguir a un Santo de otro... va de cabeza... al infierno.
 
 
 
-Generalmente se congregan miles de personas... alrededor de un Maestro... *Satguru*... y escuchan Sus charlas.
+Generalmente se congregan miles de personas... alrededor de un Maestro... *Satgurú *... y escuchan Sus charlas.
 
 Pero cada uno lo ve... de acuerdo a su propia formación mental y espiritual.
 
@@ -3226,16 +3226,16 @@ Así que todo depende.
 #### Elementos claves que resalten de cada capitulo para hacer énfasis en el aprendizaje
 
 - Dios es Sin Forma... pero para ser contemplado... asume forma humana en el Maestro.
-- La Corriente Divina se llama *Guru* en el plano físico... *Gurudev* en el astral... y *Satguru* en su raíz en *Sat*.
-- El Maestro es uno con Dios. No hay distinción entre Guru... Gurudev... Satguru... y Malik.
+- La Corriente Divina se llama *Gurú * en el plano físico... *Gurú dev* en el astral... y *Satgurú * en su raíz en *Sat*.
+- El Maestro es uno con Dios. No hay distinción entre Gurú ... Gurú dev... Satgurú ... y Malik.
 - Los avatares y Santos... manifiestan el Poder Positivo... o *Sat Purush*.
 - El Maestro es el horizonte... donde la tierra y el cielo se juntan. Un Sol oculto... brilla en Él.
 
 ##### frases memorables del capítulo (crear un máximo de tres frases)
 
-- *No existe ni la más mínima diferencia... entre el Satguru... y Swami.*
+- *No existe ni la más mínima diferencia... entre el Satgurú ... y Swami.*
 - *El Maestro de la Verdad... y la Verdad... son uno.*
-- *Guru es Brahma. Guru es Vishnu. Guru es Shiva.*
+- *Gurú  es Brahma. Gurú  es Vishnu. Gurú  es Shiva.*
 
 
 
@@ -3304,7 +3304,7 @@ Pero nuevamente... nos enfrentamos a la misma dificultad.
 
 No es fácil comprender las enseñanzas del Maestro... y seguirlas estrictamente... día tras día. Confiar en Él. Y entregar completamente nuestro ser... cuerpo y alma... a Su voluntad.
 
-A menos que Dios y el Satguru... tengan piedad con el alma en cuerpo... *jiva*... este no tiene posibilidad de llegar a la realidad... y escapar del cautiverio.
+A menos que Dios y el Satgurú ... tengan piedad con el alma en cuerpo... *jiva*... este no tiene posibilidad de llegar a la realidad... y escapar del cautiverio.
 
 
 
@@ -3314,7 +3314,7 @@ A menos que Dios y el Satguru... tengan piedad con el alma en cuerpo... *jiva*..
 
 Nosotros... con nuestro entendimiento limitado... ni siquiera podemos escuchar comprensivamente... las palabras del Maestro.
 
-Pero en la plenitud del tiempo... cuando a Dios le place... Él hace que se efectúe un encuentro... entre un alma en cuerpo... *jiva*... y un Satguru. Quien establece su contacto... con el Verdadero... *Naam*. El Poder de Dios... o Dios en Acción. La Primordial Corriente del Sonido.
+Pero en la plenitud del tiempo... cuando a Dios le place... Él hace que se efectúe un encuentro... entre un alma en cuerpo... *jiva*... y un Satgurú . Quien establece su contacto... con el Verdadero... *Naam*. El Poder de Dios... o Dios en Acción. La Primordial Corriente del Sonido.
 
 Por medio de la cual... un alma es gradualmente conducida... hasta alcanzar la fuente... y el manantial del Verbo. *Shabd*. O la Corriente del Sonido.
 
@@ -3322,7 +3322,7 @@ Por medio de la cual... un alma es gradualmente conducida... hasta alcanzar la f
 
 *Quienes no sirven a la Verdad... se marchitan como un cañizo roto.*
 *¡Oh Nanak! Aquel a quien el Maestro bendice... queda enlazado con el Naam.*
-*Tan solo con mérito especial... encuentra uno a un Satguru.*
+*Tan solo con mérito especial... encuentra uno a un Satgurú .*
 *Y Él procura una unión... entre el Surat... y el Shabd.*
 
 
@@ -3388,13 +3388,13 @@ Toda clase de regalos... fluyen eternamente de Él... como manantiales perennes.
 
 
 
-*Narain... Creador... en el Guru... es compasión encarnada... y un verdadero amigo.*
+*Narain... Creador... en el Gurú ... es compasión encarnada... y un verdadero amigo.*
 *En Su placer está todo.*
 *Y Nanak es un sacrificio... que a Él hace de sí mismo.*
 
 
 
-El mayor regalo de Dios y del Guru... es tan solo una cosa. El Verbo. *Naam*.
+El mayor regalo de Dios y del Gurú ... es tan solo una cosa. El Verbo. *Naam*.
 
 Ellos siempre otorgan a Sus devotos... las bendiciones del Verbo... *Naam*. Y así... efectúan su salvación.
 
@@ -3404,7 +3404,7 @@ Ellos siempre otorgan a Sus devotos... las bendiciones del Verbo... *Naam*. Y as
 *Con la gracia salvadora... siempre siguen adelante.*
 *Tan solo contemplarlo... es una bendición poco común.*
 *Los que son verdaderamente bendecidos... pueden obtenerla.*
-*Con la misericordia del Misericordioso... el Satguru confiere el don del Naam.*
+*Con la misericordia del Misericordioso... el Satgurú  confiere el don del Naam.*
 
 
 
@@ -3412,7 +3412,7 @@ En este mundo... y más adelante... no hay regalo más grande... que el Verbo. *
 
 Inapreciable es el tesoro del *Naam*. Uno que sea Verdadero... puede otorgarlo a Su voluntad.
 
-Uno puede asegurarse el regalo del *Naam*. Y encontrar con ello... un acceso a Dios... por medio del *Satsang*... y el *Satguru*.
+Uno puede asegurarse el regalo del *Naam*. Y encontrar con ello... un acceso a Dios... por medio del *Satsang*... y el *Satgurú *.
 
 
 
@@ -3489,7 +3489,7 @@ La panacea para todos los males... y el único camino para ganar la gracia de Di
 
 ##### frases memorables del capítulo (crear un máximo de tres frases)
 
-- *El mayor regalo de Dios y del Guru... es tan solo una cosa. El Verbo. Naam.*
+- *El mayor regalo de Dios y del Gurú ... es tan solo una cosa. El Verbo. Naam.*
 - *La semilla del Verbo... una vez sembrada por un Santo... no puede sino fructificar.*
 - *¡Oh Nanak! El Naam viene solamente de la gracia.*
 
@@ -3551,7 +3551,7 @@ Así como de ejecutar acciones... sin ayuda de órganos... y facultades externas
 
 *Bendito es en verdad el Maestro.*
 *Quien con Sus instrucciones... nos purifica de todo a todo.*
-*El Satguru corta en dos... todos los grilletes de los discípulos.*
+*El Satgurú  corta en dos... todos los grilletes de los discípulos.*
 
 
 
@@ -3592,7 +3592,7 @@ Luego siguen los karmas *Pralabdha*. Que determinan lo que llamamos destino... o
 
 El Maestro no los toca. Y el discípulo alegremente... va entretejiendo su camino... a través de su tiempo de duración.
 
-Mediante la compasión del Señor... todas las pruebas y tribulaciones vuelan. El mismo Satguru... salva al *jiva*... de todo daño.
+Mediante la compasión del Señor... todas las pruebas y tribulaciones vuelan. El mismo Satgurú ... salva al *jiva*... de todo daño.
 
 
 
@@ -3604,7 +3604,7 @@ El toque de la chispa del *Naam*... Dios en Acción... o el Poder Controlador de
 
 
 
-*El Satguru mantiene a Su discípulo... sikh... de maná y elixir.*
+*El Satgurú  mantiene a Su discípulo... sikh... de maná y elixir.*
 *Así de bondadoso es el Maestro... con Su discípulo.*
 
 
@@ -3661,7 +3661,7 @@ Después... el Maestro lo lleva a la región... que Él considere mejor... para 
 
 
 
-*Sirve al verdadero Satguru... y guarda con celo la riqueza de la Verdad.*
+*Sirve al verdadero Satgurú ... y guarda con celo la riqueza de la Verdad.*
 *En el último momento... Él vendrá a rescatarte.*
 *Únicamente es un amigo... aquel que me acompaña en mi último viaje.*
 *Y está a mi lado... ante el tribunal de Dios.*
@@ -3683,7 +3683,7 @@ Algunos nos abandonan en la pobreza. Algunos en la adversidad. Otros... en la en
 
 Unos cuantos podrán estar a nuestro lado... toda la vida. Pero también se apartan... al momento de la muerte.
 
-Sin embargo... el Satguru es el verdadero amigo... que siempre cubre al discípulo... y lo rodea con Sus brazos protectores... dondequiera que se encuentre.
+Sin embargo... el Satgurú  es el verdadero amigo... que siempre cubre al discípulo... y lo rodea con Sus brazos protectores... dondequiera que se encuentre.
 
 Está a su lado al momento de la muerte. Y aun sigue con su espíritu... como un guía... hacia los otros mundos.
 
@@ -3695,7 +3695,7 @@ Está a su lado al momento de la muerte. Y aun sigue con su espíritu... como un
 
 
 
-Un alma despertada a la Realidad por un Satguru... no puede ser una presa... de los mensajeros de la muerte.
+Un alma despertada a la Realidad por un Satgurú ... no puede ser una presa... de los mensajeros de la muerte.
 
 Sino que tiene que ir... con la Forma Radiante del Maestro. Que viene a recibirla... cuando desecha su vestimenta física.
 
@@ -3721,17 +3721,17 @@ No hay mayor amigo que Él.
 *Yo me he asido a mi Hari.*
 *Él es mi sustentador... y siempre está conmigo.*
 *Él es un ángel guardián... en ambos mundos.*
-*Pues todopoderoso... y siempre misericordioso... es el Satguru.*
-*Yo tengo conmigo al Satguru.*
+*Pues todopoderoso... y siempre misericordioso... es el Satgurú .*
+*Yo tengo conmigo al Satgurú .*
 *Quien me ayuda en todas mis necesidades.*
-*Bendito es el Satguru.*
+*Bendito es el Satgurú .*
 *Quien me revela a Dios.*
-*No hay amigo más grande que el Satguru.*
+*No hay amigo más grande que el Satgurú .*
 *Él es el Protector... aquí... y en todas partes.*
 
 
 
-Si un alma... *jiva*... llega a encontrar a un Satguru... puede dar gracias a su Dios. Pues el Maestro le asegura... vida eterna.
+Si un alma... *jiva*... llega a encontrar a un Satgurú ... puede dar gracias a su Dios. Pues el Maestro le asegura... vida eterna.
 
 Lleno como está de compasión... sin vacilación... le ayuda en todas las situaciones difíciles. Y sin el menor pensamiento... de obligación.
 
@@ -3744,7 +3744,7 @@ Maulana Rumi dice de Él:
 
 
 
-El Maestro... Guru... está comprometido a ayudar a los desamparados.
+El Maestro... Gurú ... está comprometido a ayudar a los desamparados.
 
 Por pura compasión... extiende Su gracia salvadora... a toda la humanidad.
 
@@ -3760,7 +3760,7 @@ Su compañía... es de sumo beneficio.
 
 ##### frases memorables del capítulo (crear un máximo de tres frases)
 
-- *El Satguru corta en dos... todos los grilletes de los discípulos.*
+- *El Satgurú  corta en dos... todos los grilletes de los discípulos.*
 - *Yo soy el Pan de la Vida. Aquel que venga a Mí... nunca tendrá hambre.*
 - *El discípulo del Maestro... nunca irá al infierno.*
 
@@ -3768,7 +3768,7 @@ Su compañía... es de sumo beneficio.
 
 ### El Maestro y el Poder Controlador
 
-El Satguru... es el manantial de la Gracia.
+El Satgurú ... es el manantial de la Gracia.
 
 Extrañas son las formas... en que Su Gracia actúa.
 
@@ -3793,7 +3793,7 @@ Y el alma... *jiva*... alcanza vida eterna. Llena de gracia... y de paz.
 *Mi Amigo me ha bendecido con paz.*
 *Pues Él ha manifestado internamente... la Corriente del Sonido.*
 *Mi Amigo me ha mostrado a Dios... con un toque de Su mano.*
-*Con el toque de la mano del Guru... Dios me ha bendecido... con la perla del Naam.*
+*Con el toque de la mano del Gurú ... Dios me ha bendecido... con la perla del Naam.*
 *Los pecados de eras se han desvanecido.*
 *Tal es el poder del Naam.*
 
@@ -3824,7 +3824,7 @@ El mundo entero se inclina... y se doblega a Sus pies... en silenciosa adoració
 
 #### Elementos claves que resalten de cada capitulo para hacer énfasis en el aprendizaje
 
-- El Satguru es el manantial de la Gracia. Con una sola mirada o toque... puede bendecir al alma para siempre.
+- El Satgurú  es el manantial de la Gracia. Con una sola mirada o toque... puede bendecir al alma para siempre.
 - El toque de la mano del Maestro... borra las impresiones kármicas de muchas eras.
 - Su poder controlador... se extiende por todos lados... y abre el camino a los reinos espirituales.
 - Raras son las almas afortunadas... que reciben ese toque divino.
@@ -3945,7 +3945,7 @@ Pero muy raramente... aun un alma realmente bendecida... puede ser capaz de logr
 
 
 *Si el Señor así lo ordenare... entonces... ¡oh Nanak!... puede una persona tomar el sendero de la entrega del propio ser.*
-*Bendito en verdad... es el que se entrega a los pies del Satguru.*
+*Bendito en verdad... es el que se entrega a los pies del Satgurú .*
 *Estando cerca de la Verdad... se regocija en la Verdad... y fácilmente se fusiona con la Verdad.*
 *¡Oh Nanak! Es con la gracia del Señor... como uno puede encontrar un Gurmukh tal.*
 
@@ -3954,12 +3954,12 @@ Pero muy raramente... aun un alma realmente bendecida... puede ser capaz de logr
 En las escrituras... uno encuentra un gran número de ventajas... por adoptar este Sendero:
 
 *Todos los males y tristezas se desvanecen... al entregarse a los pies del Maestro.*
-*En el mundo de alegrías y tristezas... solo escapa el que gane los pies del Satguru.*
+*En el mundo de alegrías y tristezas... solo escapa el que gane los pies del Satgurú .*
 *Un Gurmukh está separado de los tres gunas... y es aceptable al Señor.*
 *En la auto-entrega... la mente se purifica. Pero entonar solamente el Nombre de Dios... no sirve de ayuda.*
 *Para el bien del mundo... vienen aquellos que tienen sed de ver al Señor.*
 *Quien se entrega... escapa definitivamente... con todos sus deseos cumplidos.*
-*Todas las alegrías están con el Satguru. Inclínate pues... a Sus pies. Solo verlo... es una bienaventuranza.*
+*Todas las alegrías están con el Satgurú . Inclínate pues... a Sus pies. Solo verlo... es una bienaventuranza.*
 *Sin pena... canta alabanzas para Él.*
 *Yo veo que el mundo... está siendo consumido por el fuego del egoísmo.*
 *Escápate entregándote al Maestro... y luego... ocúpate del verdadero Shabd.*
@@ -3984,7 +3984,7 @@ Pero el precioso *Naam*... se manifiesta... en quien se entregue al Maestro.
 *Nadie sino el elegido... se encauza en la devoción al Naam.*
 *¡Oh Nanak! Con la entrega a los pies del Maestro... uno nunca va y viene.*
 *Al dispersador de los males... y Señor de todo... se le alcanza mediante la entrega a un Sadh. Y se cruza rápidamente... el mar tumultuoso de la vida.*
-*Cuando un alma en cuerpo... jiva... se entrega al Satguru... el Señor la toma bajo Su propia protección. Y le concede las bendiciones de la eterna felicidad. Sehaj.*
+*Cuando un alma en cuerpo... jiva... se entrega al Satgurú ... el Señor la toma bajo Su propia protección. Y le concede las bendiciones de la eterna felicidad. Sehaj.*
 *Toda duda y todo temor desaparecen.*
 *Y alcanza él... su propio Ser verdadero.*
 
@@ -4194,7 +4194,7 @@ Protección a sus antepasados... así como a sus descendientes. Y no tiene nada.
 *Aquel en quien está actuando la gracia del Señor.*
 *Solo acepta y sigue las palabras del Maestro... aquel en quien la gracia del Señor... está actuando.*
 *No hay persona más grandiosa... que aquel que... aceptando las palabras del Maestro... realiza a Dios.*
-*Por tanto... debemos aspirar por el Verbo... y tratar de asegurar un contacto con Él... por medio del Sant Satguru.*
+*Por tanto... debemos aspirar por el Verbo... y tratar de asegurar un contacto con Él... por medio del Sant Satgurú .*
 *¡Oh mente! Recuerda siempre las palabras del Señor.*
 *Aquel que... por medio del Verbo... alcance su hogar natal... es la joya más valiosa entre los hombres.*
 *Las bendiciones del Verbo de Dios... Hari Naam... son demasiado numerosas para contarse.*
@@ -4220,7 +4220,7 @@ Protección a sus antepasados... así como a sus descendientes. Y no tiene nada.
 
 #### Elementos claves que resalten de cada capitulo para hacer énfasis en el aprendizaje
 
-- Recoge los términos esenciales del sendero: *Naam*... *Shabd*... *Satguru*... *Gurudev*... *Jiva*... *Karma*... *Sach Khand*... entre otros.
+- Recoge los términos esenciales del sendero: *Naam*... *Shabd*... *Satgurú *... *Gurú dev*... *Jiva*... *Karma*... *Sach Khand*... entre otros.
 - Define nombres de Maestros y lugares relevantes: Kabir... Nanak... Sawan Singh... Beas... etcétera.
 - Clarifica conceptos de las escrituras hindúes... sijs... islámicas... y cristianas.
 - Ayuda a comprender el vocabulario técnico... de la Surat Shabd Yoga.
@@ -4229,7 +4229,7 @@ Protección a sus antepasados... así como a sus descendientes. Y no tiene nada.
 ##### frases memorables del capítulo (crear un máximo de tres frases)
 
 - *Naam es el Poder de Dios... o Dios en Acción.*
-- *Satguru es el Maestro competente... comisionado para llevar almas de regreso a Dios.*
+- *Satgurú  es el Maestro competente... comisionado para llevar almas de regreso a Dios.*
 - *El Verbo se hace carne... y habita entre nosotros.*
 
 
@@ -4244,7 +4244,7 @@ Protección a sus antepasados... así como a sus descendientes. Y no tiene nada.
 
 **ALLAH** — Dios.
 
-**AMAR DAS, GURU AMAR DAS** — 1479 a 1584. El tercer Guru de los Sikhs.
+**AMAR DAS, GURÚ  AMAR DAS** — 1479 a 1584. El tercer Gurú  de los Sikhs.
 
 **ANAMI** — Literalmente: Uno sin nombre. Dios Absoluto. Véase también bajo Maha Dayal... Nirala... y Swami.
 
@@ -4252,7 +4252,7 @@ Protección a sus antepasados... así como a sus descendientes. Y no tiene nada.
 
 **ANG** — Miembro. Extremidad.
 
-**ANGAD, GURU ANGAD** — 1504 a 1552. Segundo Guru de los Sikhs. Nombre original: Bhai Lehna. Dado el nombre de Angad por Guru Nanak. Literalmente: nacido de Su extremidad.
+**ANGAD, GURÚ  ANGAD** — 1504 a 1552. Segundo Gurú  de los Sikhs. Nombre original: Bhai Lehna. Dado el nombre de Angad por Gurú  Nanak. Literalmente: nacido de Su extremidad.
 
 **ANHAD BANI** — Música no tocada. Shabd. Naam. O Verbo. Palabra.
 
@@ -4260,7 +4260,7 @@ Protección a sus antepasados... así como a sus descendientes. Y no tiene nada.
 
 
 
-**BHAI NANDLAL** — Un discípulo y gran devoto del décimo Guru. Quien nombró su libro de versos persas Bandgi Nama... Libro de Oración... como Zindgi Nama... Libro de la Vida. El décimo Guru le tenía mucho aprecio... y le confirió la posición de Maestro. Guru-pad.
+**BHAI NANDLAL** — Un discípulo y gran devoto del décimo Gurú . Quien nombró su libro de versos persas Bandgi Nama... Libro de Oración... como Zindgi Nama... Libro de la Vida. El décimo Gurú  le tenía mucho aprecio... y le confirió la posición de Maestro. Gurú -pad.
 
 **BHANA** — Voluntad del Señor.
 
@@ -4276,7 +4276,7 @@ Protección a sus antepasados... así como a sus descendientes. Y no tiene nada.
 
 **BULLAH** — 1760 a 1810. Un poeta santo del Punjab... India. Quien nació en Lahore... distrito de Punjab. Fue discípulo de Shah Inayat.
 
-**CHARAN DASS** — 1760 a 1839. Un santo y poeta místico de Rajasthan... India. Los poemas de su discípula devota... Sehjo Bai... están dedicados en forma de canción... alabando a su Guru. Y se comparan con los poemas de Mira Bhai.
+**CHARAN DASS** — 1760 a 1839. Un santo y poeta místico de Rajasthan... India. Los poemas de su discípula devota... Sehjo Bai... están dedicados en forma de canción... alabando a su Gurú . Y se comparan con los poemas de Mira Bhai.
 
 **CHELA** — Un discípulo.
 
@@ -4314,7 +4314,7 @@ Protección a sus antepasados... así como a sus descendientes. Y no tiene nada.
 
 
 
-**FARID** — 1173 a 1266. Santo musulmán nacido en Dipalpur... en el Punjab... India. Sus versos están incluidos en el Guru Granth Sahib. La Biblia de los Sikhs.
+**FARID** — 1173 a 1266. Santo musulmán nacido en Dipalpur... en el Punjab... India. Sus versos están incluidos en el Gurú  Granth Sahib. La Biblia de los Sikhs.
 
 **GAGGAN** — Cielo.
 
@@ -4334,27 +4334,27 @@ Protección a sus antepasados... así como a sus descendientes. Y no tiene nada.
 
 **GUR KI BANI** — Véase Bani.
 
-**GUR BHAI** — Hermanos en el Guru. Iniciados del mismo Maestro.
+**GUR BHAI** — Hermanos en el Gurú . Iniciados del mismo Maestro.
 
-**GURUMUKH** — Portavoz del Guru.
+**GURÚ MUKH** — Portavoz del Gurú .
 
 **GUR SIKHI** — Verdadero discipulado.
 
-**GURU** — Literalmente: Preceptor o Guía.
+**GURÚ ** — Literalmente: Preceptor o Guía.
 
-**GURU AMAR DAS** — Véase Amar Das.
+**GURÚ  AMAR DAS** — Véase Amar Das.
 
-**GURU ANGAD** — Véase Angad.
+**GURÚ  ANGAD** — Véase Angad.
 
-**GURU ARIAN** — 1563 a 1606. Quinto Guru de los sikhs en la línea de Guru Nanak. Arjan recopiló el Granth Sahib. Biblia de los sikhs. Murió como mártir.
+**GURÚ  ARIAN** — 1563 a 1606. Quinto Gurú  de los sikhs en la línea de Gurú  Nanak. Arjan recopiló el Granth Sahib. Biblia de los sikhs. Murió como mártir.
 
-**GURU DEV o GURU DEVA** — Forma Radiante del Maestro.
+**GURÚ  DEV o GURÚ  DEVA** — Forma Radiante del Maestro.
 
-**GURU GOBIND SINGH** — 1666 a 1708. Décimo Guru de los sikhs. Autor de Dasam Granth. Libro del décimo Guru. Fundador de la religión Sikh formal.
+**GURÚ  GOBIND SINGH** — 1666 a 1708. Décimo Gurú  de los sikhs. Autor de Dasam Granth. Libro del décimo Gurú . Fundador de la religión Sikh formal.
 
-**GURU GRANTH SAHIB** — Biblia de los sikhs.
+**GURÚ  GRANTH SAHIB** — Biblia de los sikhs.
 
-**GURU NANAK** — 1469 a 1539. Primer Guru y fundador de la fe Sikh. La era moderna de oro... del Sendero de los Maestros... Sant Mat. Donde la iniciación a la Ciencia de la Surat Shabd Yoga... está abierta y es libre para todos. Se puede decir que fue acelerada e impuesta por Kabir Sahib... 1440 a 1550. Quien fue contemporáneo de Guru Nanak... por medio siglo.
+**GURÚ  NANAK** — 1469 a 1539. Primer Gurú  y fundador de la fe Sikh. La era moderna de oro... del Sendero de los Maestros... Sant Mat. Donde la iniciación a la Ciencia de la Surat Shabd Yoga... está abierta y es libre para todos. Se puede decir que fue acelerada e impuesta por Kabir Sahib... 1440 a 1550. Quien fue contemporáneo de Gurú  Nanak... por medio siglo.
 
 **HAFIZ SAHIB** — 1320 a 1389. Un gran poeta santo persa. Nació en Shiraz. Hafiz es un nombre que quiere decir: uno que conoce el Corán de corazón. Su verdadero nombre es Shamas-I-Din Mohammed. Lo que quiere decir: Sol de la Religión. Fundada por el Profeta Mahoma. Disfruta de gran popularidad entre los musulmanes... como santo y poeta.
 
@@ -4390,7 +4390,7 @@ Protección a sus antepasados... así como a sus descendientes. Y no tiene nada.
 
 
 
-**JAP JI** — El Adi Granth... libro sagrado de los sikhs... empieza con esta exquisita oración de Guru Nanak. Y juntos integran la filosofía total... de las enseñanzas de los santos.
+**JAP JI** — El Adi Granth... libro sagrado de los sikhs... empieza con esta exquisita oración de Gurú  Nanak. Y juntos integran la filosofía total... de las enseñanzas de los santos.
 
 **JIVA** — Alma en cuerpo físico.
 
@@ -4398,7 +4398,7 @@ Protección a sus antepasados... así como a sus descendientes. Y no tiene nada.
 
 **KAABA** — El mausoleo del Profeta Mahoma en La Meca. Arabia Saudita. Era anteriormente un templo con ídolos. Y ahora es un lugar de peregrinaje... entre el mundo musulmán.
 
-**KABIR** — 1440 a 1518. Un gran nombre en el calendario de los santos. La era moderna de oro del Sendero de los Maestros... Sant Mat. Donde la ciencia del Surat Shabd Yoga es expuesta libremente. Y una experiencia de primera mano... es dada a todos por igual. Y se puede decir que comenzó con Kabir Sahib y Guru Nanak. Quienes fueron contemporáneos... durante medio siglo.
+**KABIR** — 1440 a 1518. Un gran nombre en el calendario de los santos. La era moderna de oro del Sendero de los Maestros... Sant Mat. Donde la ciencia del Surat Shabd Yoga es expuesta libremente. Y una experiencia de primera mano... es dada a todos por igual. Y se puede decir que comenzó con Kabir Sahib y Gurú  Nanak. Quienes fueron contemporáneos... durante medio siglo.
 
 
 
@@ -4410,7 +4410,7 @@ Protección a sus antepasados... así como a sus descendientes. Y no tiene nada.
 
 **LAHUT** — Véase Hu.
 
-**LALO** — Un discípulo devoto de Guru Nanak.
+**LALO** — Un discípulo devoto de Gurú  Nanak.
 
 **LOGOS** — Lo mismo que Shabd... Naam... o Verbo.
 
@@ -4420,7 +4420,7 @@ Protección a sus antepasados... así como a sus descendientes. Y no tiene nada.
 
 
 
-**MACHHINDER NATH** — Un gran yogui de Hatha Yoga. Maestro del famoso Guru Gorakh Nath.
+**MACHHINDER NATH** — Un gran yogui de Hatha Yoga. Maestro del famoso Gurú  Gorakh Nath.
 
 **MAGREBI SAHIB** — Un santo musulmán.
 
@@ -4442,7 +4442,7 @@ Protección a sus antepasados... así como a sus descendientes. Y no tiene nada.
 
 **NAM DEV-A** — Un santo maharishtriano del quinto siglo. Quien más tarde se fue al Punjab. Sus poemas están incluidos en el Granth Sahib.
 
-**NANAK** — Véase Guru Nanak.
+**NANAK** — Véase Gurú  Nanak.
 
 **NARAD** — Un sabio de antaño.
 
@@ -4464,7 +4464,7 @@ Protección a sus antepasados... así como a sus descendientes. Y no tiene nada.
 
 **PANDVAS** — Los cinco Pandavas. Hijos de Pando. Ellos son los héroes del Mahabharata... antiguo clásico hindú.
 
-**PARAM SANT o PARAM SANT SATGURU** — La única diferencia entre Sant-Satguru y Param Sant-Satguru... es que el primero alcanza el estado final en la existencia presente. Mientras que el último... nació ya como Sant-Satguru.
+**PARAM SANT o PARAM SANT SATGURÚ ** — La única diferencia entre Sant-Satgurú  y Param Sant-Satgurú ... es que el primero alcanza el estado final en la existencia presente. Mientras que el último... nació ya como Sant-Satgurú .
 
 **PARA VIDYA** — Conocimiento del Más Allá. O Ciencia del Alma.
 
@@ -4506,7 +4506,7 @@ Protección a sus antepasados... así como a sus descendientes. Y no tiene nada.
 
 **RAM** — Véase Señor Rama.
 
-**RAM DAS, GURU RAM DAS** — 1534 a 1581. El cuarto Guru de los sikhs en la línea de Guru Nanak.
+**RAM DAS, GURÚ  RAM DAS** — 1534 a 1581. El cuarto Gurú  de los sikhs en la línea de Gurú  Nanak.
 
 **RAM RAI** — Sat Purusha. El Señor de la quinta región espiritual.
 
@@ -4534,11 +4534,11 @@ Protección a sus antepasados... así como a sus descendientes. Y no tiene nada.
 
 **SANCHI** — Karmas almacenados.
 
-**SANT SATGURU** — Un Maestro competente de espiritualidad. Comisionado en llevar aspirantes de regreso a Dios.
+**SANT SATGURÚ ** — Un Maestro competente de espiritualidad. Comisionado en llevar aspirantes de regreso a Dios.
 
 **SAQI** — Literalmente: alguien que sirve vino. El Maestro... quien lo lleva a uno... a la región de Eterna Bienaventuranza.
 
-**SAR BACHAN** — Lo hablado por Swami Shiv Dayal Singh Ji Maharaj. Un Sant Satguru de Agra... India. Escrito en prosa... y en forma de poemas.
+**SAR BACHAN** — Lo hablado por Swami Shiv Dayal Singh Ji Maharaj. Un Sant Satgurú  de Agra... India. Escrito en prosa... y en forma de poemas.
 
 
 
@@ -4590,7 +4590,7 @@ Protección a sus antepasados... así como a sus descendientes. Y no tiene nada.
 
 
 
-**TALWANDI** — Una pequeña aldea en el Punjab... India. El lugar donde nació Guru Nanak... el primer Guru y fundador de la fe Sikh.
+**TALWANDI** — Una pequeña aldea en el Punjab... India. El lugar donde nació Gurú  Nanak... el primer Gurú  y fundador de la fe Sikh.
 
 **TAMAS** — Una de las tres gunas o atributos. Véase Rajas y Satva.
 
@@ -4600,7 +4600,7 @@ Protección a sus antepasados... así como a sus descendientes. Y no tiene nada.
 
 **TULSI DAS** — Véase Gosain Tulsi Das.
 
-**TULSI SAHIB** — El gran santo de Hathras... distrito de U.P. India. Fue el príncipe coronado de Gwalior. Cuyo nombre original fue Sham Rao Hulkar. Toda la familia fue de devotos seguidores del Guru Gobind Singh... el décimo Guru de los Sikhs. El príncipe rechazó el trono... y se entregó a las meditaciones. Era contemporáneo de Swami Shiv Dayal Singh Ji Maharaj... de Agra. Fue el autor de Ghat Ramayana. Donde se dan detalladamente... las regiones internas.
+**TULSI SAHIB** — El gran santo de Hathras... distrito de U.P. India. Fue el príncipe coronado de Gwalior. Cuyo nombre original fue Sham Rao Hulkar. Toda la familia fue de devotos seguidores del Gurú  Gobind Singh... el décimo Gurú  de los Sikhs. El príncipe rechazó el trono... y se entregó a las meditaciones. Era contemporáneo de Swami Shiv Dayal Singh Ji Maharaj... de Agra. Fue el autor de Ghat Ramayana. Donde se dan detalladamente... las regiones internas.
 
 **UDGIT** — Literalmente: Música de las esferas. Término upanishad para Naam... Shabd... Verbo... etcétera.
 
@@ -4624,7 +4624,7 @@ Protección a sus antepasados... así como a sus descendientes. Y no tiene nada.
 
 
 
-**WAH-I-GURU** — Literalmente: Alabanza al Maestro. Usado por Dios.
+**WAH-I-GURÚ ** — Literalmente: Alabanza al Maestro. Usado por Dios.
 
 **WALI** — Hombre-Dios. Maestro Perfecto.
 
@@ -4643,32 +4643,35 @@ Protección a sus antepasados... así como a sus descendientes. Y no tiene nada.
 
 
 *Este libro se terminó de imprimir en el mes de enero de 1991... en los talleres gráficos de Rodríguez Quito Editores. Teléfono: 281 45 71. Apartado Aéreo 16888... Bogotá... Colombia.*
-</script><script>(function(){const texto=document.getElementById("content").textContent;function parsear(texto){const lineas = texto.split(/\r?\n/);
-            const nodos = [];
-            let pila = [];
-            let id = 1;
-            for (let linea of lineas) {
-                linea = linea.trim();
-                if (!linea) continue;
-                let nivel = -1, etiqueta = linea;
-                if (linea.startsWith("# ")) { nivel = 0; etiqueta = linea.slice(2).trim(); }
-                else if (linea.startsWith("## ")) { nivel = 1; etiqueta = linea.slice(3).trim(); }
-                else if (linea.startsWith("### ")) { nivel = 2; etiqueta = linea.slice(4).trim(); }
-                else if (linea.startsWith("#### ")) { nivel = 3; etiqueta = linea.slice(5).trim(); }
-                else if (linea.startsWith("- ") || linea.startsWith("* ")) {
-                    nivel = pila.length ? pila[pila.length-1].nivel + 1 : 1;
-                    etiqueta = linea.slice(2).trim();
-                } else {
-                    nivel = pila.length ? pila[pila.length-1].nivel + 1 : 1;
-                    etiqueta = linea;
-                }
-                while (pila.length && pila[pila.length-1].nivel >= nivel) pila.pop();
-                const padreId = pila.length ? pila[pila.length-1].id : null;
-                const nuevoId = id++;
-                nodos.push({ id: nuevoId, etiqueta, nivel, padreId });
-                pila.push({ id: nuevoId, nivel });
-            }
-            const hijosMap = new Map();
-            nodos.forEach(n => hijosMap.set(n.id, []));
-            nodos.forEach(n => { if (n.padreId) hijosMap.get(n.padreId).push(n.id); });
-            return { nodos, hijosMap, raices: nodos.filter(n => n.padreId === null) };}const {nodos,hijosMap,raices}=parsear(texto);const nodosMap=new Map(nodos.map(n=>[n.id,n]));let currentReadingList=[],currentReadingIndex=0,currentNodoId=null,synth=window.speechSynthesis,utterance=null,isLooping=false;let exportedDark = false;const btnExp = document.getElementById("btnExpandirAll");const btnCol = document.getElementById("btnColapsarAll");const btnDark = document.getElementById("btnThemeExport");if(btnExp) btnExp.onclick = () => { document.querySelectorAll(".nodo-hijos").forEach(c => c.classList.remove("collapsed")); document.querySelectorAll(".icono-toggle").forEach(i => i.textContent = "▼"); };if(btnCol) btnCol.onclick = () => { document.querySelectorAll(".nodo-hijos").forEach(c => c.classList.add("collapsed")); document.querySelectorAll(".icono-toggle").forEach(i => i.textContent = "▶"); };if(btnDark) btnDark.onclick = () => { exportedDark = !exportedDark; document.body.classList.toggle("dark-theme", exportedDark); btnDark.innerHTML = exportedDark ? "☀️ Modo Claro" : "🌙 Modo Oscuro"; };function construir(id){const n=nodosMap.get(id);if(!n)return null;const hijos=hijosMap.get(id)||[];const d=document.createElement("div");d.className="card-nodo level-"+Math.min(n.nivel,7);d.innerHTML='<div class="nodo-titulo"><span data-id="'+id+'">'+n.etiqueta+'</span></div>';if(hijos.length){const icon=document.createElement("span");icon.className="icono-toggle";icon.textContent="▶";d.querySelector(".nodo-titulo").appendChild(icon);const cont=document.createElement("div");cont.className="nodo-hijos collapsed";hijos.forEach(h=>{const c=construir(h);if(c)cont.appendChild(c);});d.appendChild(cont);d.addEventListener("click",e=>{e.stopPropagation();cont.classList.toggle("collapsed");icon.textContent=cont.classList.contains("collapsed")?"▼":"▶";currentNodoId=id;stopReading();prepararLecturaDesdeNodo(id);document.getElementById("btnPlayPause").textContent="▶";});d.querySelector("span[data-id]").addEventListener("dblclick",e=>{e.stopPropagation();const orig=n.etiqueta;const input=document.createElement("input");input.type="text";input.value=orig;input.style.width="100%";input.className="form-control form-control-sm";const span=e.target;span.replaceWith(input);input.focus();input.addEventListener("blur",()=>{if(input.value.trim()!==orig)span.textContent=input.value.trim();});input.addEventListener("keypress",ev=>{if(ev.key==="Enter")input.blur();});});}return d;}document.getElementById("mapa").append(...raices.map(r=>construir(r.id)).filter(Boolean));document.getElementById("searchInput").addEventListener("input",function(){const term=this.value.toLowerCase().trim();document.querySelectorAll(".card-nodo").forEach(c=>{const ok=!term||c.textContent.toLowerCase().includes(term);c.style.display=ok?"":"none";c.style.boxShadow=(term&&ok)?"0 0 0 2px gold":"";});});document.getElementById("clearSearch").addEventListener("click",()=>{document.getElementById("searchInput").value="";document.querySelectorAll(".card-nodo").forEach(c=>{c.style.display="";c.style.boxShadow="";});});function poblarVoces(){const voces=synth.getVoices().filter(v=>v.lang.startsWith("es"));const sel=document.getElementById("voiceSelect");sel.innerHTML="";voces.forEach((v,i)=>{const o=document.createElement("option");o.value=i;o.textContent=v.name+" ("+v.lang+")";sel.appendChild(o);});const pref=voces.findIndex(v=>v.name.includes("Sabina")||v.name.includes("Diego")||v.name.includes("Google")||v.lang==="es-US");if(pref>=0)sel.selectedIndex=pref;}synth.onvoiceschanged=poblarVoces;poblarVoces();function limpiarTexto(txt){return txt.replace(/^#{1,6}\s*/gm,"").replace(/^[-*]\s*/gm,"").replace(/[*_~`>#\(\)\[\]"";]/g," ").replace(/\n+/g,". ").replace(/\b\d+(\.\d+)*\.?\s*/g," ").replace(/\s{2,}/g," ").trim();}function leerSiguiente(){if(!currentReadingList.length){document.getElementById("currentReading").textContent="Lista vacía.";return;}if(currentReadingIndex>=currentReadingList.length){if(isLooping){currentReadingIndex=0;leerSiguiente();}else{document.getElementById("currentReading").textContent="Finalizada.";document.getElementById("btnPlayPause").textContent="▶";}return;}const txt=currentReadingList[currentReadingIndex],limpio=limpiarTexto(txt);if(!limpio){currentReadingIndex++;leerSiguiente();return;}if(utterance)synth.cancel();utterance=new SpeechSynthesisUtterance(limpio);const voces=synth.getVoices().filter(v=>v.lang.startsWith("es"));if(voces.length)utterance.voice=voces[parseInt(document.getElementById("voiceSelect").value)]||voces[0];utterance.rate=0.9;utterance.pitch=1;utterance.onend=()=>{currentReadingIndex++;leerSiguiente();};synth.speak(utterance);document.getElementById("currentReading").textContent="Leyendo: "+limpio.substring(0,30)+"...";}function prepararLecturaDesdeNodo(id){const lista=[];function recorrer(id){const n=nodosMap.get(id);if(!n)return;lista.push(n.etiqueta);(hijosMap.get(id)||[]).forEach(h=>recorrer(h));}if(nodosMap.has(id))recorrer(id);else raices.forEach(r=>recorrer(r.id));currentReadingList=lista;currentReadingIndex=0;}function togglePlayPause(){if(synth.speaking&&!synth.paused){synth.pause();document.getElementById("btnPlayPause").textContent="▶";}else if(synth.paused){synth.resume();document.getElementById("btnPlayPause").textContent="⏸";}else{if(!currentNodoId)currentNodoId=raices[0].id;prepararLecturaDesdeNodo(currentNodoId);leerSiguiente();document.getElementById("btnPlayPause").textContent="⏸";}}function stopReading(){synth.cancel();utterance=null;isLooping=false;document.getElementById("btnPlayPause").textContent="▶";document.getElementById("btnLoop").textContent="🔁";document.getElementById("currentReading").textContent="Detenido.";}document.getElementById("btnPlayPause").addEventListener("click",togglePlayPause);document.getElementById("btnStop").addEventListener("click",stopReading);document.getElementById("btnLoop").addEventListener("click",()=>{isLooping=!isLooping;document.getElementById("btnLoop").textContent=isLooping?"🔁✅":"🔁";if(isLooping&&!synth.speaking)togglePlayPause();});})();</script></body></html>
+</script><script>(function(){document.documentElement.lang="es-ES";var raw=document.getElementById("raw-content").textContent;var synth=window.speechSynthesis;var utterance=null,listaNodos=[],indiceActual=0,bloqueado=false,bucleActivo=false,estadoReproductor="detenido";var cronoInterval=null,cronoSegundos=0,cronoInicioTramo=0,vocesCargadas=[],generacion=0,seleccionados=new Set();var karaokeActivo=false,karaokeWords=[],karaokePositions=[],karaokeCurrentIdx=-1;var mediaRecorder=null,audioChunks=[],grabando=false;var btnPlay=document.getElementById("btnPlay"),btnPause=document.getElementById("btnPause"),btnStop=document.getElementById("btnStop"),btnLoop=document.getElementById("btnLoop"),btnClear=document.getElementById("btnClear"),btnKaraoke=document.getElementById("btnKaraoke"),btnRec=document.getElementById("btnRec");var voiceSelect=document.getElementById("voiceSelect"),statusEl=document.getElementById("status"),timerDisplay=document.getElementById("timerDisplay"),timerEstimado=document.getElementById("timerEstimado"),mapaDiv=document.getElementById("mapa"),selectionInfo=document.getElementById("selectionInfo");var karaokeModal=document.getElementById("karaokeModal"),karaokeBody=document.getElementById("karaokeBody"),kPlay=document.getElementById("kPlay"),kPause=document.getElementById("kPause"),kStop=document.getElementById("kStop"),kClose=document.getElementById("kClose");var parsear=function parsear(texto){
+var lineas=texto.split('\n');var nodos=[];var pila=[];var id=1;var tieneMarkdown=false;
+for(var k=0;k<lineas.length;k++){var l=lineas[k].trim();if(l.indexOf('# ')===0||l.indexOf('## ')===0||l.indexOf('### ')===0||l.indexOf('- ')===0||l.indexOf('* ')===0){tieneMarkdown=true;break;}}
+if(!tieneMarkdown){nodos.push({id:1,etiqueta:texto.trim(),nivel:0,padreId:null});var hMap=new Map();hMap.set(1,[]);return{nodos:nodos,hijosMap:hMap,raices:[nodos[0]]};}
+for(var i=0;i<lineas.length;i++){var linea=lineas[i].trim();if(!linea)continue;var nivel=-1;var etiqueta=linea;
+if(linea.indexOf('# ')===0){nivel=0;etiqueta=linea.slice(2);}
+else if(linea.indexOf('## ')===0){nivel=1;etiqueta=linea.slice(3);}
+else if(linea.indexOf('### ')===0){nivel=2;etiqueta=linea.slice(4);}
+else if(linea.indexOf('#### ')===0){nivel=3;etiqueta=linea.slice(5);}
+else if(linea.indexOf('- ')===0||linea.indexOf('* ')===0){nivel=pila.length?pila[pila.length-1].nivel+1:1;etiqueta=linea.slice(2);}
+else{nivel=pila.length?pila[pila.length-1].nivel+1:1;etiqueta=linea;}
+while(pila.length&&pila[pila.length-1].nivel>=nivel)pila.pop();
+var padreId=pila.length?pila[pila.length-1].id:null;
+nodos.push({id:id,etiqueta:etiqueta,nivel:nivel,padreId:padreId});pila.push({id:id,nivel:nivel});id++;}
+var hijosMap=new Map();nodos.forEach(function(n){hijosMap.set(n.id,[]);});
+nodos.forEach(function(n){if(n.padreId!==null)hijosMap.get(n.padreId).push(n.id);});
+return{nodos:nodos,hijosMap:hijosMap,raices:nodos.filter(function(n){return n.padreId===null;})};
+};var limpiarTexto=function limpiarTexto(t){
+return t.replace(/^#{1,6}\s*/gm,'').replace(/^[-*+]\s*/gm,'').replace(/^>\s?/gm,'').replace(/\*\*/g,'').replace(/__/g,'').replace(/\*/g,'').replace(/_/g,'').replace(/~~/g,'').replace(/`/g,'').replace(/\[([^\]]*)\]\([^)]*\)/g,'$1').replace(/!\[([^\]]*)\]\([^)]*\)/g,'$1').replace(/\n+/g,'. ').replace(/\s{2,}/g,' ').trim();
+};var obtenerTextoNodoYHijos=function obtenerTextoNodoYHijos(id,resultado){
+var partes=[];
+function rec(id){
+var nodo=null;
+for(var i=0;i<resultado.nodos.length;i++){if(resultado.nodos[i].id===id){nodo=resultado.nodos[i];break;}}
+if(!nodo)return;
+partes.push(nodo.etiqueta);
+var hijos=resultado.hijosMap.get(id)||[];
+hijos.forEach(rec);
+}
+rec(id);
+return partes;
+};function prepararLista(){var res=parsear(raw);var lista=[];if(seleccionados.size>0){res.nodos.forEach(function(nodo){if(seleccionados.has(nodo.etiqueta)){var textos=obtenerTextoNodoYHijos(nodo.id,res);textos.forEach(function(t){if(lista.indexOf(t)===-1)lista.push(t);});}});return lista;}function rec(id){var nodo=null;for(var i=0;i<res.nodos.length;i++){if(res.nodos[i].id===id){nodo=res.nodos[i];break;}}if(!nodo)return;lista.push(nodo.etiqueta);var hijos=res.hijosMap.get(id)||[];hijos.forEach(rec);}res.raices.forEach(function(r){rec(r.id);});return lista;}function actualizarInfoSeleccion(){if(seleccionados.size===0)selectionInfo.textContent="";else selectionInfo.textContent="☑ "+seleccionados.size+" seleccionado"+(seleccionados.size>1?"s":"");}function generarMapa(){var res=parsear(raw);var nodosMap=new Map();res.nodos.forEach(function(n){nodosMap.set(n.id,n);});var hijosMap=res.hijosMap;mapaDiv.innerHTML="";if(!res.raices.length){mapaDiv.innerHTML="<div style=\"text-align:center;color:#999;padding:40px;\">Sin contenido</div>";return;}function construir(id){var nodo=nodosMap.get(id);if(!nodo)return null;var hijos=hijosMap.get(id)||[];var card=document.createElement("div");card.className="node level-"+Math.min(nodo.nivel,4);var chk=document.createElement("input");chk.type="checkbox";chk.checked=seleccionados.has(nodo.etiqueta);chk.onclick=function(e){e.stopPropagation();};chk.onchange=function(e){e.stopPropagation();if(chk.checked)seleccionados.add(nodo.etiqueta);else seleccionados.delete(nodo.etiqueta);actualizarInfoSeleccion();calcularEstimacion();};card.appendChild(chk);var sp=document.createElement("span");sp.className="node-text";sp.textContent=nodo.etiqueta;card.appendChild(sp);if(hijos.length){var icon=document.createElement("span");icon.className="icon";icon.textContent="▶";card.appendChild(icon);var cont=document.createElement("div");cont.className="children collapsed";hijos.forEach(function(h){var c=construir(h);if(c)cont.appendChild(c);});card.appendChild(cont);card.onclick=function(e){e.stopPropagation();cont.classList.toggle("collapsed");icon.textContent=cont.classList.contains("collapsed")?"▶":"▼";};}return card;}res.raices.forEach(function(r){var c=construir(r.id);if(c)mapaDiv.appendChild(c);});calcularEstimacion();actualizarInfoSeleccion();}function calcularEstimacion(){var lista=prepararLista();var limpio=limpiarTexto(lista.join(" "));if(!limpio){timerEstimado.textContent="";return;}var palabras=limpio.split(/\s+/).length;var segundosTotales=Math.round((palabras/(175*0.9))*60);var min=Math.floor(segundosTotales/60);var seg=segundosTotales%60;timerEstimado.textContent="~"+min+"m "+(seg<10?"0":"")+seg+"s ("+palabras+" pal.)";}function obtenerVocesEspanol(){var voces=synth.getVoices();var es=[];for(var i=0;i<voces.length;i++){if(voces[i].lang.toLowerCase().indexOf("es")===0)es.push(voces[i]);}return es;}function poblarVoces(){vocesCargadas=obtenerVocesEspanol();voiceSelect.innerHTML="";if(vocesCargadas.length===0){var opt=document.createElement("option");opt.textContent="(Cargando voces...)";voiceSelect.appendChild(opt);return;}vocesCargadas.forEach(function(v,i){var opt=document.createElement("option");opt.value=i;opt.textContent=v.name;voiceSelect.appendChild(opt);});}if(synth.onvoiceschanged!==undefined)synth.onvoiceschanged=poblarVoces;poblarVoces();setTimeout(poblarVoces,100);setTimeout(poblarVoces,300);setTimeout(poblarVoces,800);setTimeout(poblarVoces,1500);function asignarVoz(u){vocesCargadas=obtenerVocesEspanol();if(vocesCargadas.length===0)return false;var idx=parseInt(voiceSelect.value);if(isNaN(idx)||idx<0||idx>=vocesCargadas.length)idx=0;u.lang="es-ES";u.voice=vocesCargadas[idx];return true;}function formatearTiempo(s){var m=Math.floor(s/60);var g=s%60;return(m<10?"0":"")+m+":"+(g<10?"0":"")+g;}function iniciarCrono(){if(cronoInterval)return;cronoInicioTramo=Date.now();cronoInterval=setInterval(function(){var t=Math.floor((Date.now()-cronoInicioTramo)/1000);timerDisplay.textContent=formatearTiempo(cronoSegundos+t);},250);}function pausarCrono(){if(!cronoInterval)return;var t=Math.floor((Date.now()-cronoInicioTramo)/1000);cronoSegundos+=t;clearInterval(cronoInterval);cronoInterval=null;timerDisplay.textContent=formatearTiempo(cronoSegundos);}function resetCrono(){if(cronoInterval){clearInterval(cronoInterval);cronoInterval=null;}cronoSegundos=0;cronoInicioTramo=0;timerDisplay.textContent="00:00";}function prepararKaraoke(txtOrig){karaokeBody.innerHTML="";karaokeWords=[];karaokePositions=[];karaokeCurrentIdx=-1;var limpio=limpiarTexto(txtOrig);if(!limpio){karaokeBody.textContent="(Sin texto)";return;}var title=document.createElement("div");title.className="karaoke-node-title";title.textContent="▶ "+txtOrig;karaokeBody.appendChild(title);var container=document.createElement("div");var palabras=limpio.split(/\s+/);var pos=0;for(var i=0;i<palabras.length;i++){var w=palabras[i];if(!w){pos++;continue;}var span=document.createElement("span");span.textContent=w;span.className="karaoke-word";span.dataset.idx=i;container.appendChild(span);karaokePositions.push({start:pos,end:pos+w.length,idx:i});pos+=w.length+1;container.appendChild(document.createTextNode(" "));karaokeWords.push(span);}karaokeBody.appendChild(container);}function resaltarPalabra(ci){if(!karaokeActivo)return;if(karaokePositions.length===0)return;for(var i=0;i<karaokePositions.length;i++){var p=karaokePositions[i];if(ci>=p.start&&ci<p.end){if(karaokeCurrentIdx!==i){if(karaokeCurrentIdx>=0&&karaokeWords[karaokeCurrentIdx])karaokeWords[karaokeCurrentIdx].classList.remove("highlight-word");karaokeWords[i].classList.add("highlight-word");karaokeCurrentIdx=i;try{karaokeWords[i].scrollIntoView({block:"center",behavior:"smooth"});}catch(e){}}return;}}}function limpiarSynth(){generacion++;try{if(utterance){utterance.onend=null;utterance.onerror=null;utterance.onstart=null;utterance.onboundary=null;}if(synth.paused)synth.resume();synth.cancel();}catch(e){}}function hablar(texto,onDone){if(vocesCargadas.length===0)vocesCargadas=obtenerVocesEspanol();if(vocesCargadas.length===0){statusEl.textContent="⚠ Cargando voces...";setTimeout(function(){hablar(texto,onDone);},400);return;}limpiarSynth();var miGen=generacion;setTimeout(function(){if(miGen!==generacion)return;if(estadoReproductor!=="leyendo")return;try{var u=new SpeechSynthesisUtterance(texto);u.lang="es-ES";if(!asignarVoz(u)){statusEl.textContent="⚠ Sin voz";onDone();return;}u.rate=0.9;u.pitch=1;u.volume=1;u.onboundary=function(ev){if(!karaokeActivo)return;if(miGen!==generacion)return;if(ev.name==="word"||ev.name==="sentence")resaltarPalabra(ev.charIndex);};u.onend=function(){if(miGen!==generacion)return;if(estadoReproductor!=="leyendo")return;onDone();};u.onerror=function(e){var err=e.error||"";if(err==="interrupted"||err==="canceled")return;if(miGen!==generacion)return;if(estadoReproductor==="leyendo")setTimeout(function(){if(estadoReproductor==="leyendo"&&miGen===generacion)onDone();},200);};utterance=u;synth.speak(u);}catch(e){if(miGen===generacion)onDone();}},200);}function leerSiguiente(){if(bloqueado)return;if(estadoReproductor!=="leyendo")return;if(indiceActual>=listaNodos.length){if(bucleActivo){indiceActual=0;statusEl.textContent="🔂 Bucle reiniciando...";setTimeout(leerSiguiente,500);return;}estadoReproductor="detenido";statusEl.textContent="Lectura finalizada";btnPlay.textContent="▶";btnPause.style.display="none";indiceActual=0;pausarCrono();return;}var texto=listaNodos[indiceActual];var limpio=limpiarTexto(texto);if(!limpio){indiceActual++;leerSiguiente();return;}var p=bucleActivo?"🔂 ":"🔊 ";var si=seleccionados.size>0?" [CRIBA]":"";var ri=grabando?" ⏺ REC":"";statusEl.textContent=p+"Leyendo ("+(indiceActual+1)+"/"+listaNodos.length+")"+si+ri;if(karaokeActivo)prepararKaraoke(texto);hablar(limpio,function(){indiceActual++;leerSiguiente();});}btnPlay.onclick=function(){if(estadoReproductor==="leyendo"){estadoReproductor="pausado";limpiarSynth();btnPlay.textContent="▶";btnPause.style.display="inline-block";statusEl.textContent="⏸ Pausado";pausarCrono();return;}if(estadoReproductor==="pausado"){estadoReproductor="leyendo";btnPlay.textContent="⏸";btnPause.style.display="none";statusEl.textContent="🔊 Reanudando...";iniciarCrono();setTimeout(function(){leerSiguiente();},250);return;}bloqueado=false;listaNodos=prepararLista();if(!listaNodos.length){statusEl.textContent="Sin contenido";return;}indiceActual=0;resetCrono();iniciarCrono();estadoReproductor="leyendo";var si=seleccionados.size>0?" (CRIBA: "+seleccionados.size+" nodos)":"";statusEl.textContent="🔊 Iniciando..."+si;btnPlay.textContent="⏸";btnPause.style.display="none";setTimeout(function(){leerSiguiente();},250);};btnPause.onclick=function(){if(estadoReproductor==="leyendo"){estadoReproductor="pausado";limpiarSynth();btnPlay.textContent="▶";btnPause.style.display="none";statusEl.textContent="⏸ Pausado";pausarCrono();}};btnStop.onclick=function(){bloqueado=true;estadoReproductor="detenido";limpiarSynth();utterance=null;indiceActual=0;listaNodos=[];btnPlay.textContent="▶";btnPause.style.display="none";statusEl.textContent="Detenido";resetCrono();setTimeout(function(){bloqueado=false;},250);};btnLoop.onclick=function(){bucleActivo=!bucleActivo;btnLoop.classList.toggle("active",bucleActivo);statusEl.textContent=bucleActivo?"🔂 Bucle ACTIVADO":"🔂 Bucle desactivado";};btnClear.onclick=function(){seleccionados.clear();actualizarInfoSeleccion();generarMapa();statusEl.textContent="✕ Selección limpiada";};btnKaraoke.onclick=function(){karaokeActivo=!karaokeActivo;btnKaraoke.classList.toggle("active",karaokeActivo);if(karaokeActivo){karaokeModal.classList.add("show");statusEl.textContent="📖 Karaoke ACTIVADO";if(listaNodos.length>0&&indiceActual<listaNodos.length)prepararKaraoke(listaNodos[indiceActual]);else{var lista=prepararLista();if(lista.length>0)prepararKaraoke(lista[0]);else karaokeBody.innerHTML="<div style=\"text-align:center;color:#999;padding:40px\">Sin contenido</div>";}}else{karaokeModal.classList.remove("show");statusEl.textContent="📖 Karaoke desactivado";}};kClose.onclick=function(){karaokeActivo=false;btnKaraoke.classList.remove("active");karaokeModal.classList.remove("show");statusEl.textContent="📖 Karaoke cerrado";};kPlay.onclick=function(){btnPlay.click();};kPause.onclick=function(){btnPause.click();};kStop.onclick=function(){btnStop.click();};async function toggleGrabacion(){if(grabando){try{mediaRecorder.stop();}catch(e){}return;}if(!navigator.mediaDevices||!navigator.mediaDevices.getDisplayMedia){alert("Tu navegador no soporta la grabación. Usa Chrome o Edge.");return;}if(typeof MediaRecorder==="undefined"){alert("MediaRecorder no soportado. Usa Chrome o Edge.");return;}try{var stream=null;var errs=[];try{stream=await navigator.mediaDevices.getDisplayMedia({audio:true,video:false});}catch(e1){errs.push("audio-only:"+e1.name);}if(!stream){try{stream=await navigator.mediaDevices.getDisplayMedia({audio:true,video:true});}catch(e2){errs.push("audio+video:"+e2.name);}}if(!stream){try{stream=await navigator.mediaDevices.getDisplayMedia({video:true});}catch(e3){errs.push("video-only:"+e3.name);}}if(!stream){alert("No se pudo capturar.\n\nErrores:\n"+errs.join("\n")+"\n\nUsa CHROME o EDGE y marca Compartir audio de la pestaña.");return;}var hasAudio=stream.getAudioTracks().length>0;if(!hasAudio){statusEl.textContent="⚠ No se capturó audio";try{stream.getTracks().forEach(function(t){t.stop();});}catch(e){}alert("Se capturó VIDEO pero NO AUDIO.\n\nSelecciona la PESTAÑA actual y marca Compartir audio de la pestaña.");return;}var audioStream=new MediaStream(stream.getAudioTracks());audioChunks=[];var mimeType="";if(typeof MediaRecorder.isTypeSupported==="function"){var tipos=["audio/webm;codecs=opus","audio/webm","audio/mp4;codecs=mp4a","audio/mp4","audio/ogg;codecs=opus","audio/ogg"];for(var i=0;i<tipos.length;i++){if(MediaRecorder.isTypeSupported(tipos[i])){mimeType=tipos[i];break;}}}var opts=mimeType?{mimeType:mimeType}:{};try{mediaRecorder=new MediaRecorder(audioStream,opts);}catch(e3){try{mediaRecorder=new MediaRecorder(audioStream);}catch(e4){alert("MediaRecorder no acepta este audio.\n"+e4.message);try{stream.getTracks().forEach(function(t){t.stop();});}catch(e){}return;}}mediaRecorder.ondataavailable=function(e){if(e.data&&e.data.size>0)audioChunks.push(e.data);};mediaRecorder.onstop=function(){if(audioChunks.length===0){statusEl.textContent="⚠ No se grabó audio";grabando=false;btnRec.classList.remove("recording");btnRec.textContent="⏺";return;}var tipo=mediaRecorder.mimeType||"audio/webm";var ext=tipo.indexOf("mp4")!==-1?"mp4":(tipo.indexOf("ogg")!==-1?"ogg":"webm");var blob=new Blob(audioChunks,{type:tipo});var url=URL.createObjectURL(blob);var a=document.createElement("a");a.href=url;a.download="audio_"+Date.now()+"."+ext;document.body.appendChild(a);a.click();document.body.removeChild(a);setTimeout(function(){URL.revokeObjectURL(url);},1000);grabando=false;btnRec.classList.remove("recording");btnRec.textContent="⏺";statusEl.textContent="✅ Grabación descargada ("+ext.toUpperCase()+", "+(blob.size/1024).toFixed(0)+" KB)";};stream.getTracks().forEach(function(t){t.onended=function(){if(grabando){try{mediaRecorder.stop();}catch(e){}}}});mediaRecorder.start(1000);grabando=true;btnRec.classList.add("recording");btnRec.textContent="⏹";statusEl.textContent="⏺ GRABANDO...";setTimeout(function(){if(grabando)statusEl.textContent="⏺ Grabando... pulsa ⏺ de nuevo para detener";},2000);}catch(err){var msg="No se pudo grabar.\n\n";if(err.name==="NotAllowedError")msg+="No autorizaste o cancelaste.";else if(err.name==="NotSupportedError")msg+="Tu navegador no soporta esta función. Usa CHROME o EDGE.";else msg+="Error: "+err.name+"\n"+err.message;alert(msg);grabando=false;btnRec.classList.remove("recording");btnRec.textContent="⏺";}}btnRec.onclick=toggleGrabacion;document.getElementById("btnExpandir").onclick=function(){document.querySelectorAll(".children").forEach(function(c){c.classList.remove("collapsed");});document.querySelectorAll(".icon").forEach(function(i){i.textContent="▼";});};document.getElementById("btnColapsar").onclick=function(){document.querySelectorAll(".children").forEach(function(c){c.classList.add("collapsed");});document.querySelectorAll(".icon").forEach(function(i){i.textContent="▶";});};document.getElementById("btnTheme").onclick=function(){document.body.classList.toggle("dark");this.textContent=document.body.classList.contains("dark")?"☀ Claro":"🌙 Modo Oscuro";};document.getElementById("searchInput").oninput=function(){var term=this.value.toLowerCase().trim();document.querySelectorAll(".node").forEach(function(n){var ok=!term||n.textContent.toLowerCase().indexOf(term)!==-1;n.style.display=ok?"":"none";});};document.getElementById("clearSearch").onclick=function(){document.getElementById("searchInput").value="";document.querySelectorAll(".node").forEach(function(n){n.style.display="";});};generarMapa();})();</script></body></html>
